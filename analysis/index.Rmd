@@ -1,5 +1,5 @@
 ---
-title: "**Research Progress Template (Liu Lab)**"
+title: "**Research Progress Jinghui (Liu Lab)**"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -20,4 +20,4 @@ Welcome to my research website.
 
 ## Topics
 
-- Progress in 2022. [click](2022.html)
+- Progress in 2023. [click](2023.html)
