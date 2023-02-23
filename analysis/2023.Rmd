@@ -38,6 +38,7 @@ Use GTEx data to generate a whole-genome Trans-eQTL map based on TransPCO.
 - More strict way to count read
 ![](assets/count_modes.png){width="90%"}
 - Filter by CPM (counts per million)
+
 For each gene, count the number of samples with CPM > 0.5. 11771 genes kept if filter by number of samples with CPM > 0.5 greater than 10% of total samples.
 ```{r out.width="80%", fig.cap="Figure 1: Number of genes kept with different CPM filtering criteria.",fig.align='center', echo=F}
 knitr::include_graphics(c("assets/Fig1.png"), error = FALSE)
@@ -48,6 +49,10 @@ knitr::include_graphics(c("assets/Fig1.png"), error = FALSE)
 knitr::include_graphics(c("assets/Fig2.png"), error = FALSE)
 ```
 
+The problematic left tails are caused by too many ties (0's) for genes that are only found in few samples.
+```{r out.width="80%", fig.cap="Figure 3: Density of normalized RPKM and original counts of 3 example genes.",fig.align='center', echo=F}
+knitr::include_graphics(c("assets/Fig3.png"), error = FALSE)
+```
 
 ## Another week {#header-of-another-section}
 
