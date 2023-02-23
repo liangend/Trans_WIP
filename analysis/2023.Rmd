@@ -40,18 +40,24 @@ Use GTEx data to generate a whole-genome Trans-eQTL map based on TransPCO.
 - Filter by CPM (counts per million)
 
 For each gene, count the number of samples with CPM > 0.5. 11771 genes kept if filter by number of samples with CPM > 0.5 greater than 10% of total samples.
-```{r out.width="80%", fig.cap="Figure 1: Number of genes kept with different CPM filtering criteria.",fig.align='center', echo=F}
+```{r echo=F, fig.align='center', fig.cap="Figure 1: Number of genes kept with different CPM filtering criteria."}
 knitr::include_graphics(c("assets/Fig1.png"), error = FALSE)
 ```
 
 - Normalize RPKM (Reads per kilo base of transcript per million)
-```{r out.width="80%", fig.cap="Figure 2: Density of normalized RPKM of randomly selected 10 genes.",fig.align='center', echo=F}
+```{r out.width="80%", fig.cap="Figure 2: Density of normalized RPKM of randomly selected 10 genes.", fig.align='center', echo=F}
 knitr::include_graphics(c("assets/Fig2.png"), error = FALSE)
 ```
 
 The problematic left tails are caused by too many ties (0's) for genes that are only found in few samples.
 ```{r out.width="80%", fig.cap="Figure 3: Density of normalized RPKM and original counts of 3 example genes.",fig.align='center', echo=F}
 knitr::include_graphics(c("assets/Fig3.png"), error = FALSE)
+```
+
+
+When filtering by number of samples with CPM > 0.5 greater than 20% of total samples (10003 genes kept).
+```{r out.width="80%", fig.cap="Figure 4: Density of normalized RPKM of randomly selected 10 genes using 20% of samples as cutoff.",fig.align='center', echo=F}
+knitr::include_graphics(c("assets/Fig4.png"), error = FALSE)
 ```
 
 ## Another week {#header-of-another-section}
