@@ -26,7 +26,7 @@ blockquote {
 Number of variant-module associations = 136,904. Correlation of two p values = 0.77
 
 Correlation of two p values (both < 0.05) = 0.73
-```{r echo=F, fig.align='center', fig.cap="Comparing the p values of PCO and ACAT on Lili's demo"}
+```{r echo=F, fig.align='center', fig.cap="Comparing the p values of PCO and ACAT}
 knitr::include_graphics(c("assets/pco_acat_comp.png"), error = FALSE)
 ```
 
