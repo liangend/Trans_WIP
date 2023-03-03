@@ -20,6 +20,18 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 3/8/2023
+
+### 1. Comparing the p values of PCO and ACAT on Lili's demo
+Number of variant-module associations = 136,904. Correlation of two p values = 0.77
+
+Correlation of two p values (both < 0.05) = 0.73
+```{r echo=F, fig.align='center', fig.cap="Comparing the p values of PCO and ACAT on Lili's demo"}
+knitr::include_graphics(c("assets/pco_acat_comp.png"), error = FALSE)
+```
+
+
+### 2. Analysis 2
 
 ## 2/21/2023
 
@@ -60,17 +72,5 @@ When filtering by number of samples with CPM > 0.5 greater than 20% of total sam
 knitr::include_graphics(c("assets/Fig4.png"), error = FALSE)
 ```
 
-## Another week {#header-of-another-section}
 
-### 1. Analysis 1
-
-#### Analysis
-
-#### Figures, tables
-
-#### Observations
-
-
-
-### 2. Analysis 2
 
