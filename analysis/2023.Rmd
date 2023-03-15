@@ -25,7 +25,7 @@ blockquote {
 ### 1. New read count results based on GENCODE gtf (for GTEx V8)
 14079 genes for 670 individuals after QC.
 
-## Compare my TPM with GTEx TPM
+#### Compare my TPM with GTEx TPM
 14047 genes with cor > 0.85; 32 genes with cor <= 0.85
 ```{r echo=F, fig.align='center', fig.cap="Cor between GTEx TPM and my TPM"}
 knitr::include_graphics(c("assets/tpm_cor.png"), error = FALSE)
@@ -40,6 +40,30 @@ knitr::include_graphics(c("assets/gene_tpm.png"), error = FALSE)
 knitr::include_graphics(c("assets/mean_tpm.png"), error = FALSE)
 ```
 
+### 2. Compare PC with PEER
+For the normalized TPM, the first 60 PCs and PEER factors are highly correlated.
+```{r echo=F, fig.align='center', fig.cap="Correlation between PC and PEER factor"}
+knitr::include_graphics(c("assets/pc_peer_cor.png"), error = FALSE)
+```
+Zhou et al. (2022) suggested that PCA performs close to or better than PEER factors for QTL mapping under different scenarios, but with much shorter time and better interpretability.
+
+### 3. Coexpression analysis
+I used 5 genotype PCs, 3 factors (sex, pcr, platform), and different numbers (10 and 60) of expression PCs or PEER factors as the covariates to obtain the residual expression, which is further used as the input of WGCNA.
+
+I used the elbow method (Zhou et al., 1992) the optimized the number of PCs to be included. 
+```{r echo=F, fig.align='center', fig.cap="Optimize the number of PCs using the elbow method"}
+knitr::include_graphics(c("assets/pc_elbow.png"), error = FALSE)
+```
+Another optimization method, BE algorithm, tends to include more PCs than the elbow method, but both are fewer the number of PEER factors included in the GTEx paper.
+
+Number of modules, unassigned genes, and genes in top 3 modules when including different number of PCs or PEER factors.
+```{r echo=F, fig.align='center', fig.cap=""}
+knitr::include_graphics(c("assets/coexp_comp.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Cluster dendrogram of genes when including 19 PCs"}
+knitr::include_graphics(c("assets/wgcna_dendro_19pc.png"), error = FALSE)
+```
 
 ## 3/8/2023
 
