@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree7198058432857fad10201591f8ed6e576d6a5f75targetblank7198058a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/7198058432857fad10201591f8ed6e576d6a5f75" target="_blank">7198058</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree5f2d0e726fe0988b30db02a9bf00aee31d4642cdtargetblank5f2d0e7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/5f2d0e726fe0988b30db02a9bf00aee31d4642cd" target="_blank">5f2d0e7</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree7198058432857fad10201591f8ed6e576d6a5f75targetblank7198058a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree5f2d0e726fe0988b30db02a9bf00aee31d4642cdtargetblank5f2d0e7a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/7198058432857fad10201591f8ed6e576d6a5f75" target="_blank">7198058</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/5f2d0e726fe0988b30db02a9bf00aee31d4642cd" target="_blank">5f2d0e7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/5f2d0e726fe0988b30db02a9bf00aee31d4642cd/analysis/2023.Rmd" target="_blank">5f2d0e7</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/2d25571b1d32700cad2db4c43328c614fd2a26e0/docs/2023.html" target="_blank">2d25571</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1011,25 +1045,173 @@ For the normalized TPM, the first 60 PCs and PEER factors are highly correlated.
 Correlation between PC and PEER factor
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pc_peer_cor">
+Past versions of pc_peer_cor.png
+</button>
+</p>
+<div id="fig-pc_peer_cor" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/6514442cb5408edf879fa24e1ca3e5f689621b58/docs/assets/pc_peer_cor.png" target="_blank">6514442</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Zhou et al. (2022) suggested that PCA performs close to or better than PEER factors for QTL mapping under different scenarios, but with much shorter time and better interpretability.</p>
 </div>
 <div id="coexpression-analysis" class="section level3">
 <h3>3. Coexpression analysis</h3>
 <p>I used 5 genotype PCs, 3 factors (sex, pcr, platform), and different numbers (10 and 60) of expression PCs or PEER factors as the covariates to obtain the residual expression, which is further used as the input of WGCNA.</p>
-I used the elbow method (Zhou et al., 1992) the optimized the number of PCs to be included.
+I used the elbow method (Zhou et al., 2022) the optimized the number of PCs to be included.
 <div class="figure" style="text-align: center">
 <img src="assets/pc_elbow.png" alt="Optimize the number of PCs using the elbow method"  />
 <p class="caption">
 Optimize the number of PCs using the elbow method
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pc_elbow">
+Past versions of pc_elbow.png
+</button>
+</p>
+<div id="fig-pc_elbow" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/6514442cb5408edf879fa24e1ca3e5f689621b58/docs/assets/pc_elbow.png" target="_blank">6514442</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Another optimization method, BE algorithm, tends to include more PCs than the elbow method, but both are fewer the number of PEER factors included in the GTEx paper.</p>
 <p>Number of modules, unassigned genes, and genes in top 3 modules when including different number of PCs or PEER factors. <img src="assets/coexp_comp.png" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-coexp_comp">
+Past versions of coexp_comp.png
+</button>
+</p>
+<div id="fig-coexp_comp" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/6514442cb5408edf879fa24e1ca3e5f689621b58/docs/assets/coexp_comp.png" target="_blank">6514442</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="figure" style="text-align: center">
 <img src="assets/wgcna_dendro_19pc.png" alt="Cluster dendrogram of genes when including 19 PCs"  />
 <p class="caption">
 Cluster dendrogram of genes when including 19 PCs
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-wgcna_dendro_19pc">
+Past versions of wgcna_dendro_19pc.png
+</button>
+</p>
+<div id="fig-wgcna_dendro_19pc" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/6514442cb5408edf879fa24e1ca3e5f689621b58/docs/assets/wgcna_dendro_19pc.png" target="_blank">6514442</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-15
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
