@@ -20,7 +20,7 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
-## 3/22/2023
+## 3/24/2023
 
 ### 1. New read count results based on GENCODE gtf (for GTEx V8)
 14079 genes for 670 individuals after QC.
@@ -35,7 +35,7 @@ knitr::include_graphics(c("assets/tpm_cor.png"), error = FALSE)
 knitr::include_graphics(c("assets/gene_tpm.png"), error = FALSE)
 ```
 
-~13196 genes with mean TPM < 100 for both groups.
+13196 genes with mean TPM < 100 for both groups.
 ```{r echo=F, fig.align='center', fig.cap="Mean TPM across 670 individuals"}
 knitr::include_graphics(c("assets/mean_tpm.png"), error = FALSE)
 ```
@@ -63,6 +63,19 @@ knitr::include_graphics(c("assets/coexp_comp.png"), error = FALSE)
 
 ```{r echo=F, fig.align='center', fig.cap="Cluster dendrogram of genes when including 19 PCs"}
 knitr::include_graphics(c("assets/wgcna_dendro_19pc.png"), error = FALSE)
+```
+
+### 4. New read count results based on GENCODE gtf (v26, adjusted for mappability)
+After QC and removing genes on chrX, chrM and chrY, 12929 genes for 670 individuals were kept.
+
+### 5. cis-eQTL analysis
+Include 5 genotype PCs, 3 factors (sex, pcr, platform), 10 of expression PCs as covariates.
+
+12360 eGenes (qval < 0.05) in GTEx data; 13275 eGenes in my analysis.
+
+1871 same variants associated with the same eGene
+```{r echo=F, fig.align='center', fig.cap="Comparison of the slopes of shared variants"}
+knitr::include_graphics(c("assets/cis_eqtl_slope_comp.png"), error = FALSE)
 ```
 
 ## 3/8/2023
