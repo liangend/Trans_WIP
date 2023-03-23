@@ -69,11 +69,16 @@ knitr::include_graphics(c("assets/wgcna_dendro_19pc.png"), error = FALSE)
 After QC and removing genes on chrX, chrM and chrY, 12929 genes for 670 individuals were kept.
 
 ### 5. cis-eQTL analysis
-Include 5 genotype PCs, 3 factors (sex, pcr, platform), 10 of expression PCs as covariates.
+Included 5 genotype PCs, 3 factors (sex, pcr, platform), 10 of expression PCs as covariates. 
 
-12360 eGenes (qval < 0.05) in GTEx data; 13275 eGenes in my analysis.
+Genotype data: 46,569,704 variants after QC. 10,726,114 SNPs (MAF >= 0.01) were included in the cis-eQTL analysis.
 
-1871 same variants associated with the same eGene
+12360 eGenes (qval < 0.05) in GTEx data; 6067 eGenes in my analysis. Among 12360 eGenes reported by GTEx, there are 3858 genes not included in our analysis.
+```{r echo=F, fig.align='center', fig.cap="Comparison of number of eGenes"}
+knitr::include_graphics(c("assets/egene_venn.png"), error = FALSE)
+```
+
+1906 same top variants associated with the same eGene. Slope cor = 0.99
 ```{r echo=F, fig.align='center', fig.cap="Comparison of the slopes of shared variants"}
 knitr::include_graphics(c("assets/cis_eqtl_slope_comp.png"), error = FALSE)
 ```
