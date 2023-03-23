@@ -79,7 +79,7 @@ knitr::include_graphics(c("assets/egene_venn.png"), error = FALSE)
 ```
 
 1906 same top variants associated with the same eGene. Slope cor = 0.99
-```{r echo=F, fig.align='center', fig.cap="Comparison of the slopes of shared variants"}
+```{r echo=F, out.width="40%", fig.align='center', fig.cap="Comparison of the slopes of shared variants"}
 knitr::include_graphics(c("assets/cis_eqtl_slope_comp.png"), error = FALSE)
 ```
 
