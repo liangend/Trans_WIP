@@ -84,6 +84,7 @@ knitr::include_graphics(c("assets/cis_eqtl_slope_comp.png"), error = FALSE)
 ```
 
 When using the same covarites (60 PEER factors) as GTEx, the number of eGenes increases to 8320.
+
 ## 3/8/2023
 
 ### 1. Comparing the p values of PCO and ACAT on Lili's demo
