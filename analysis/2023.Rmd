@@ -66,10 +66,10 @@ knitr::include_graphics(c("assets/wgcna_dendro_19pc.png"), error = FALSE)
 ```
 
 ### 4. New read count results based on GENCODE gtf (v26, adjusted for mappability)
-After QC and removing genes on chrX, chrM and chrY, 12929 genes for 670 individuals were kept.
+After QC and removing genes on chrX, chrM and chrY, 12929 genes for 670 individuals were kept. Co-expression analysis based on 5 genotype PCs, 3 factors (sex, pcr, platform), 10 expression PCs resulted in 211 modules, 327 unassigned genes, and top 3 modules containing 968, 411, and 323 genes.
 
 ### 5. cis-eQTL analysis
-Included 5 genotype PCs, 3 factors (sex, pcr, platform), 10 of expression PCs as covariates. 
+Included 5 genotype PCs, 3 factors (sex, pcr, platform), 10 expression PCs as covariates. 
 
 Genotype data: 46,569,704 variants after QC. 10,726,114 SNPs (MAF >= 0.01) were included in the cis-eQTL analysis.
 
