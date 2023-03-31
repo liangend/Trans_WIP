@@ -90,7 +90,7 @@ Included 5 genotype PCs, 3 factors (sex, pcr, platform), 60 expression PCs as co
 
 Genotype data: 6,568,202 SNPs (MAF >= 0.05; 6.2 million SNPs in DGN) were included in the trans-eQTL analysis.
 
-In trans-eQTL mapping for DGN, there are 3899 trans-eQTL SNP–module pairs. 3421 of the SNPs were also included in the GTEx genotype. For 98 signals found from chr20-22, 5 (5.1%) were replicated in my analysis (p < 0.05/3421).
+In trans-eQTL mapping for DGN, there are 3899 trans-eQTL SNP–module pairs (Wang et al., 2022). 3421 of the SNPs were also included in the GTEx genotype. For 98 signals found from chr20-22, 5 (5.1%) were replicated in my analysis (p < 0.05/3421).
 
 ## 3/8/2023
 
