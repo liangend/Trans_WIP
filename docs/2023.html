@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-03-30
+<strong>Last updated:</strong> 2023-04-05
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree3fe49c44b79690cefc06637a399a247f97f42f4dtargetblank3fe49c4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/3fe49c44b79690cefc06637a399a247f97f42f4d" target="_blank">3fe49c4</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree771f5184d245f47c03c183994568d783e226eb3btargetblank771f518a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/771f5184d245f47c03c183994568d783e226eb3b" target="_blank">771f518</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree3fe49c44b79690cefc06637a399a247f97f42f4dtargetblank3fe49c4a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree771f5184d245f47c03c183994568d783e226eb3btargetblank771f518a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/3fe49c44b79690cefc06637a399a247f97f42f4d" target="_blank">3fe49c4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/771f5184d245f47c03c183994568d783e226eb3b" target="_blank">771f518</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/771f5184d245f47c03c183994568d783e226eb3b/analysis/2023.Rmd" target="_blank">771f518</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-04-05
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/7509421f9653ac7f86a6c53464eee54e3582f433/docs/2023.html" target="_blank">7509421</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-03-31
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1203,7 +1237,7 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
-<h2>3/24/2023</h2>
+<h2>4/12/2023</h2>
 <div id="new-read-count-results-based-on-adjusted-gencode-gtf-for-gtex-v8" class="section level3">
 <h3>1. New read count results based on adjusted GENCODE gtf (for GTEx V8)</h3>
 <p>After QC and removing genes on chrX, chrM and chrY, 12929 genes for 670 individuals were kept. Among these genes, 12039 are protein coding genes and lincRNA.</p>
@@ -1520,6 +1554,31 @@ liangend
 </div>
 </div>
 <p>For trans-PCO analysis, I conducted co-expression analysis based on 5 genotype PCs, 3 factors (sex, pcr, platform), and 10 expression PCs, which resulted in 199 modules, 235 unassigned genes, and top 3 modules containing 858, 481, and 475 genes.</p>
+<div id="functional-profiling-of-gene-modules" class="section level4">
+<h4>Functional profiling of gene modules</h4>
+To check the sanity of gene module classification, I investigated the enrichment of GO terms (FDR &lt; 0.05) for several gene modules using g:Profiler.
+<div class="figure" style="text-align: center">
+<img src="assets/mod_go.png" alt="Shared and unique GO terms for module 5, 6 and 7"  />
+<p class="caption">
+Shared and unique GO terms for module 5, 6 and 7
+</p>
+</div>
+<p>Top 3 significant BP terms:</p>
+<p>module 5 (313 genes): leukocyte activation, cell activation, lymphocyte activation;</p>
+<p>module 6 (312 genes): defense response to symbiont, defense response to virus, response to virus;</p>
+<p>module 7 (307 genes): wound healing, platelet activation, blood coagulation.</p>
+Another example:
+<div class="figure" style="text-align: center">
+<img src="assets/mod_go2.png" alt="Shared and unique GO terms for module 106, 107 and 108"  />
+<p class="caption">
+Shared and unique GO terms for module 106, 107 and 108
+</p>
+</div>
+<p>Top 3 significant BP terms:</p>
+<p>module 106 (31 genes): extracellular structure organization, extracellular matrix organization, external encapsulating structure organization;</p>
+<p>module 107 (31 genes): monosaccharide metabolic process, hexose metabolic process, glucose metabolic process;</p>
+<p>module 108 (31 genes): None</p>
+</div>
 </div>
 <div id="cis-eqtl-analysis" class="section level3">
 <h3>4. cis-eQTL analysis</h3>
@@ -1630,7 +1689,26 @@ liangend
 <h3>5. trans-eQTL analysis</h3>
 <p>Included 5 genotype PCs, 3 factors (sex, pcr, platform), 60 expression PCs as covariates.</p>
 <p>Genotype data: 6,568,202 SNPs (MAF &gt;= 0.05; 6.2 million SNPs in DGN) were included in the trans-eQTL analysis.</p>
-<p>In trans-eQTL mapping for DGN, there are 3899 trans-eQTL SNP–module pairs (Wang et al., 2022). 3421 of the SNPs were also included in the GTEx genotype. For 98 signals found from chr20-22, 5 (5.1%) were replicated in my analysis (p &lt; 0.05/3421).</p>
+<div id="trans-eqtl-mapping-based-on-166-gene-modules-from-wang-et-al.-2022" class="section level4">
+<h4>trans-eQTL mapping based on 166 gene modules from Wang et al. (2022)</h4>
+In trans-eQTL mapping for DGN, there are 3899 significant trans-eQTL SNP–module pairs (Wang et al., 2022). 3421 of the SNPs were also included in the GTEx genotype. For the 12132 genes (166 gene modules) included in Wang et al. (2022), there are 10547 genes included in my analysis. For 1241 signals analyzed, 50 (4.0%) were replicated in my analysis (p &lt; 0.05/3421).
+<div class="figure" style="text-align: center">
+<img src="assets/trans_sig_rep.png" alt="Comparing the p values of PCO and ACAT"  />
+<p class="caption">
+Comparing the p values of PCO and ACAT
+</p>
+</div>
+</div>
+<div id="trans-eqtl-mapping-based-on-199-gene-modules" class="section level4">
+<h4>trans-eQTL mapping based on 199 gene modules</h4>
+Much more significant signals were found in GTEx data (648499 signals from ~200 chromosome-module pairs). I then investigated the regulatory activity of these signals and those from Wang et al. (2022) based on chromatin states of neutrophils from peripheral blood (Roadmap project).
+<div class="figure" style="text-align: center">
+<img src="assets/trans_func_enrich.png" alt="Comparing the p values of PCO and ACAT"  />
+<p class="caption">
+Comparing the p values of PCO and ACAT
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="section-1" class="section level2">
