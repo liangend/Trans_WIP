@@ -116,14 +116,19 @@ Genotype data: 6,568,202 SNPs (MAF >= 0.05; 6.2 million SNPs in DGN) were includ
 
 #### trans-eQTL mapping based on 166 gene modules from Wang et al. (2022)
 In trans-eQTL mapping for DGN, there are 3899 significant trans-eQTL SNP–module pairs (Wang et al., 2022). For the 12132 genes (166 gene modules) included in Wang et al. (2022), there are 10547 genes included in my analysis. Among 3330 shared SNP-gene module pairs, 470 (14.0%) were replicated in my analysis (p < 0.05/3330).
-```{r echo=F, fig.align='center', fig.cap="Comparing the p values of PCO and ACAT"}
+```{r echo=F, fig.align='center', fig.cap="Trans-eQTL replication for DGN"}
 knitr::include_graphics(c("assets/trans_sig_rep.png"), error = FALSE)
 ```
 
 #### trans-eQTL mapping based on 199 gene modules
 In total 159 significant signals were found in GTEx data (p < 5e-8). I then investigated the regulatory activity of these signals and those from Wang et al. (2022) based on chromatin states of neutrophils from peripheral blood (Roadmap project).
-```{r echo=F, fig.align='center', fig.cap="Comparing the p values of PCO and ACAT"}
+```{r echo=F, fig.align='center', fig.cap="Functional enrichment of significant trans signals"}
 knitr::include_graphics(c("assets/trans_func_enrich.png"), error = FALSE)
+```
+
+GTEx V8 reported 13 trans-eQTLs in whole blood (Wang et al., 2022), and 4 (30.8%) were replicated in my analysis (p < 0.05/13).
+```{r echo=F, fig.align='center', fig.cap="Trans-eQTL replication for GTEx"}
+knitr::include_graphics(c("assets/trans_gtex_rep.png"), error = FALSE)
 ```
 
 ## 3/8/2023
