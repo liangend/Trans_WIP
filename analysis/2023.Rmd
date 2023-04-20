@@ -41,7 +41,7 @@ Genes in module 51 of DGN (61 genes): AURKC, HKR1, LINC00665, PHKB, TRAPPC2P1, Z
 ### 2. Simulation of the effect of # genes and samples on the detection of significant modules
 I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.05. The genotype of the SNP was randomly generated for 10/100/500/700/1000 individuals. Expression of other genes were generated from N(0, 1). In total 100 simulations were conducted for each scenario.
 ```{r echo=F, fig.align='center', fig.cap="p values of the SNP-module"}
-knitr::include_graphics(c("assets/sim_ngene_nsample.pdf"), error = FALSE)
+knitr::include_graphics(c("assets/sim_ngene_nsample.png"), error = FALSE)
 ```
 The more genes in one module, the more samples required to detect the signal.
 
