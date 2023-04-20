@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-04-11
+<strong>Last updated:</strong> 2023-04-19
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb154091037f821092d809d913554ca4a2f7db8a8targetblankb154091a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/b154091037f821092d809d913554ca4a2f7db8a8" target="_blank">b154091</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree368102f06372f249a0fc343efd3a91c5bda748cftargetblank368102fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/368102f06372f249a0fc343efd3a91c5bda748cf" target="_blank">368102f</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb154091037f821092d809d913554ca4a2f7db8a8targetblankb154091a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree368102f06372f249a0fc343efd3a91c5bda748cftargetblank368102fa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/b154091037f821092d809d913554ca4a2f7db8a8" target="_blank">b154091</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/368102f06372f249a0fc343efd3a91c5bda748cf" target="_blank">368102f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/368102f06372f249a0fc343efd3a91c5bda748cf/analysis/2023.Rmd" target="_blank">368102f</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-04-20
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/30a8138be88c1fa64a59e29a2ec20c8835ae41af/docs/2023.html" target="_blank">30a8138</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-04-12
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1305,6 +1339,40 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>5/1/2023</h2>
+<div id="distribution-of-trans-signals" class="section level3">
+<h3>1. Distribution of trans signals</h3>
+32/199 modules were found to have at least one significant trans signal in GTEx blood. In contrast, 102/166 modules were found to have trans-eQTLs in DGN. Most signals were observed in module 135 with 105 SNPs in GTEx (module 51 with 695 SNPs in DGN).
+<div class="figure" style="text-align: center">
+<img src="assets/mod_dist.png" alt="p values of the SNP-module"  />
+<p class="caption">
+p values of the SNP-module
+</p>
+</div>
+Most signals were found on chromosome 3. In GTEx blood, there are significant 108 SNPs from chr3 (1237 SNPs from chr3 in DGN). Out of these 108 SNPs, 105 SNPs are relative to module 135 (652/1237 SNPs from chr3 are relative to module 51 in DGN).
+<div class="figure" style="text-align: center">
+<img src="assets/chr_dist.png" alt="p values of the SNP-module"  />
+<p class="caption">
+p values of the SNP-module
+</p>
+</div>
+<p>Genes in module 135 of GTEx: AURKC, HKR1, ZNF134, ZNF135, ZNF211, ZNF256, ZNF304, ZNF329, ZNF347, ZNF418, ZNF543, ZNF544, ZNF548, ZNF549, ZNF550, ZNF551, ZNF585B, ZNF606, ZNF671, ZNF772, ZNF776, ZSCAN18</p>
+<p>Genes in module 51 of DGN (61 genes): AURKC, HKR1, LINC00665, PHKB, TRAPPC2P1, ZFP28, ZFP82, ZIK1, ZNF107, ZNF134, ZNF135, ZNF154, ZNF160, ZNF211, ZNF256, ZNF274, ZNF285, ZNF304, ZNF320, ZNF329, ZSCAN18, etc.</p>
+<p>20/22 genes in module 135 of GTEx overlaps with module 51 of DGN. Functions of module 135 involves RNA polymerase II transcription regulation and binding, DNA-binding transcription factor activity.</p>
+</div>
+<div id="simulation-of-the-effect-of-genes-and-samples-on-the-detection-of-significant-modules" class="section level3">
+<h3>2. Simulation of the effect of # genes and samples on the detection of significant modules</h3>
+I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.05. The genotype of the SNP was randomly generated for 10/100/500/700/1000 individuals. Expression of other genes were generated from N(0, 1). In total 100 simulations were conducted for each scenario.
+<div class="figure" style="text-align: center">
+<img src="assets/sim_ngene_nsample.pdf" alt="p values of the SNP-module"  />
+<p class="caption">
+p values of the SNP-module
+</p>
+</div>
+<p>The more genes in one module, the more samples required to detect the signal.</p>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>4/12/2023</h2>
 <div id="new-read-count-results-based-on-adjusted-gencode-gtf-for-gtex-v8" class="section level3">
 <h3>1. New read count results based on adjusted GENCODE gtf (for GTEx V8)</h3>
@@ -1953,10 +2021,47 @@ GTEx V8 reported 13 trans-eQTLs in whole blood (Wang et al., 2022), and 4 (30.8%
 Trans-eQTL replication for GTEx
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-trans_gtex_rep">
+Past versions of trans_gtex_rep.png
+</button>
+</p>
+<div id="fig-trans_gtex_rep" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/9856c4b6cdc2be402efd16ea7130265ad5e8ca43/docs/assets/trans_gtex_rep.png" target="_blank">9856c4b</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-04-12
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
-<div id="section-1" class="section level2">
+</div>
+</div>
+<div id="section-2" class="section level2">
 <h2>3/8/2023</h2>
 <div id="comparing-the-p-values-of-pco-and-acat-on-lilis-demo" class="section level3">
 <h3>1. Comparing the p values of PCO and ACAT on Lili’s demo</h3>
@@ -2007,7 +2112,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>2/21/2023</h2>
 <div id="summary" class="section level3">
 <h3>1. Summary</h3>
