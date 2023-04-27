@@ -61,7 +61,7 @@ knitr::include_graphics(c("assets/type_I_error_sim.png"), error = FALSE)
 ```
 
 Power of PCO ACAT under different scenarios
-```{r echo=F, fig.align='center', fig.cap="Type I error rate"}
+```{r echo=F, fig.align='center', fig.cap="Power analysis"}
 knitr::include_graphics(c("assets/power_sim.png"), error = FALSE)
 ```
 The more genes in one module, the more samples required to detect the signal.
@@ -76,7 +76,7 @@ Use the method in GTEx to find "eModule":
 knitr::include_graphics(c("assets/n_sig_mod.png"), error = FALSE)
 ```
 
-Based on permutation FDR correction, there are 108 significant SNP-module pairs (nominal p-value threshold = 4.6e-9). 
+Based on permutation FDR correction, there are 108 significant SNP-module pairs from 4 chromosomes and 6 modules, 100 of which were between chr3 and mod135 (nominal p-value threshold = 4.6e-9). 
 
 ## 4/12/2023
 
