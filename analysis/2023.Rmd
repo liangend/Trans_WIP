@@ -38,12 +38,45 @@ Genes in module 51 of DGN (61 genes): AURKC, HKR1, LINC00665, PHKB, TRAPPC2P1, Z
 
 20/22 genes in module 135 of GTEx overlaps with module 51 of DGN. Functions of module 135 involves RNA polymerase II transcription regulation and binding, DNA-binding transcription factor activity.
 
-### 2. Simulation of the effect of # genes and samples on the detection of significant modules
-I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.05. The genotype of the SNP was randomly generated for 10/100/500/700/1000 individuals. Expression of other genes were generated from N(0, 1). In total 100 simulations were conducted for each scenario.
+### 2. Replication of GTEx trans signals based on DGN module
+There are 256 significant trans SNP-module pairs (p < 5e-8) found in GTEx blood based on DGN modules. 205 of them were also included in the analysis of DGN, and 150 SNP-module pairs were also significant (p < 5e-8)
 ```{r echo=F, fig.align='center', fig.cap="p values of the SNP-module"}
-knitr::include_graphics(c("assets/sim_ngene_nsample.png"), error = FALSE)
+knitr::include_graphics(c("assets/gtex_dgn_rep.png"), error = FALSE)
+```
+
+### 3. Simulation of the effect of # genes and samples on the detection of significant modules
+I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.15. The genotype of the SNP was randomly generated for 10/100/300/500/700/1000/2000 individuals. Expression of other genes were generated from N(0, 1). In total 1000 simulations were conducted for each scenario.
+
+```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 100 genes (no causal genes were simulated)"}
+knitr::include_graphics(c("assets/null_p_gene100.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 200 genes (no causal genes were simulated)"}
+knitr::include_graphics(c("assets/null_p_gene200.png"), error = FALSE)
+```
+
+Type I error rate of PCO ACAT under different scenarios
+```{r echo=F, fig.align='center', fig.cap="Type I error rate"}
+knitr::include_graphics(c("assets/type_I_error_sim.png"), error = FALSE)
+```
+
+Power of PCO ACAT under different scenarios
+```{r echo=F, fig.align='center', fig.cap="Type I error rate"}
+knitr::include_graphics(c("assets/power_sim.png"), error = FALSE)
 ```
 The more genes in one module, the more samples required to detect the signal.
+
+### 4. Multiple testing
+Use the method in GTEx to find "eModule":
+
+1. Take the most extreme P-value per gene module, and multiply that P-value by 1e6;
+
+2. Then apply Benjamini-Hochberg on the adjusted extreme P-values across gene modules to control FDR.
+```{r echo=F, fig.align='center', fig.cap="Number of significant modules detected"}
+knitr::include_graphics(c("assets/n_sig_mod.png"), error = FALSE)
+```
+
+Based on permutation FDR correction, there are 108 significant SNP-module pairs (nominal p-value threshold = 4.6e-9). 
 
 ## 4/12/2023
 
@@ -137,7 +170,7 @@ When using the same covarites (60 PEER factors) as GTEx, the number of eGenes in
 ### 5. trans-eQTL analysis
 Included 5 genotype PCs, 3 factors (sex, pcr, platform), 60 expression PCs as covariates. 
 
-Genotype data: 6,568,202 SNPs (MAF >= 0.05; 6.2 million SNPs in DGN) were included in the trans-eQTL analysis.
+Genotype data: 6,380,580 SNPs (MAF >= 0.05; 6.2 million SNPs in DGN) were included in the trans-eQTL analysis.
 
 #### trans-eQTL mapping based on 166 gene modules from Wang et al. (2022)
 In trans-eQTL mapping for DGN, there are 3899 significant trans-eQTL SNP–module pairs (Wang et al., 2022). For the 12132 genes (166 gene modules) included in Wang et al. (2022), there are 10547 genes included in my analysis. Among 3330 shared SNP-gene module pairs, 470 (14.0%) were replicated in my analysis (p < 0.05/3330).
