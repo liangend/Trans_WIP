@@ -85,11 +85,11 @@ knitr::include_graphics(c("assets/mod_div_comp.png"), error = FALSE)
 ```
 
 ### 6. Summary of 7 tissues
-```{r echo=F, fig.align='center', fig.cap="Summary of each tissue"}
+```{r echo=F, fig.align='center', fig.cap="Summary of each tissue (10_mod_div_comp.R)"}
 knitr::include_graphics(c("assets/basic_stats.png"), error = FALSE)
 ```
 
-```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs"}
+```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs (10_sum_7tissues.R)"}
 knitr::include_graphics(c("assets/sig_summary.png"), error = FALSE)
 ```
 
