@@ -80,12 +80,12 @@ Based on permutation FDR correction, there are 108 significant SNP-module pairs 
 
 ### 5. Divide large modules into smaller ones
 I divided large modules (module size > half of the sample size) into smaller modules (sub module size <= half of the sample size).
-```{r echo=F, fig.align='center', fig.cap="Module division comparison"}
+```{r echo=F, fig.align='center', fig.cap="Module division comparison (10_mod_div_comp.R)"}
 knitr::include_graphics(c("assets/mod_div_comp.png"), error = FALSE)
 ```
 
 ### 6. Summary of 7 tissues
-```{r echo=F, fig.align='center', fig.cap="Summary of each tissue (10_mod_div_comp.R)"}
+```{r echo=F, fig.align='center', fig.cap="Summary of each tissue (10_sum_7tissues.R)"}
 knitr::include_graphics(c("assets/basic_stats.png"), error = FALSE)
 ```
 
