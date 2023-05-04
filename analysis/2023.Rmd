@@ -24,12 +24,12 @@ blockquote {
 
 ### 1. Distribution of trans signals
 32/199 modules were found to have at least one significant trans signal in GTEx blood. In contrast, 102/166 modules were found to have trans-eQTLs in DGN. Most signals were observed in module 135 with 105 SNPs in GTEx (module 51 with 695 SNPs in DGN).
-```{r echo=F, fig.align='center', fig.cap="p values of the SNP-module"}
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across modules"}
 knitr::include_graphics(c("assets/mod_dist.png"), error = FALSE)
 ```
 
 Most signals were found on chromosome 3. In GTEx blood, there are significant 108 SNPs from chr3 (1237 SNPs from chr3 in DGN). Out of these 108 SNPs, 105 SNPs are relative to module 135 (652/1237 SNPs from chr3 are relative to module 51 in DGN).
-```{r echo=F, fig.align='center', fig.cap="p values of the SNP-module"}
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across chromosomes"}
 knitr::include_graphics(c("assets/chr_dist.png"), error = FALSE)
 ```
 Genes in module 135 of GTEx: AURKC, HKR1, ZNF134, ZNF135, ZNF211, ZNF256, ZNF304, ZNF329, ZNF347, ZNF418, ZNF543, ZNF544, ZNF548, ZNF549, ZNF550, ZNF551, ZNF585B, ZNF606, ZNF671, ZNF772, ZNF776, ZSCAN18
@@ -40,7 +40,7 @@ Genes in module 51 of DGN (61 genes): AURKC, HKR1, LINC00665, PHKB, TRAPPC2P1, Z
 
 ### 2. Replication of GTEx trans signals based on DGN module
 There are 256 significant trans SNP-module pairs (p < 5e-8) found in GTEx blood based on DGN modules. 205 of them were also included in the analysis of DGN, and 150 SNP-module pairs were also significant (p < 5e-8)
-```{r echo=F, fig.align='center', fig.cap="p values of the SNP-module"}
+```{r echo=F, fig.align='center', fig.cap="Trans signal replication between GTEx and DGN"}
 knitr::include_graphics(c("assets/gtex_dgn_rep.png"), error = FALSE)
 ```
 
@@ -77,6 +77,21 @@ knitr::include_graphics(c("assets/n_sig_mod.png"), error = FALSE)
 ```
 
 Based on permutation FDR correction, there are 108 significant SNP-module pairs from 4 chromosomes and 6 modules, 100 of which were between chr3 and mod135 (nominal p-value threshold = 4.6e-9). 
+
+### 5. Divide large modules into smaller ones
+I divided large modules (module size > half of the sample size) into smaller modules (sub module size <= half of the sample size).
+```{r echo=F, fig.align='center', fig.cap="Module division comparison"}
+knitr::include_graphics(c("assets/mod_div_comp.png"), error = FALSE)
+```
+
+### 6. Summary of 7 tissues
+```{r echo=F, fig.align='center', fig.cap="Summary of each tissue"}
+knitr::include_graphics(c("assets/basic_stats.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs"}
+knitr::include_graphics(c("assets/sig_summary.png"), error = FALSE)
+```
 
 ## 4/12/2023
 
