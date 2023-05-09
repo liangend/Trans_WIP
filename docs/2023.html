@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-05-03
+<strong>Last updated:</strong> 2023-05-09
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeccd223b2ed4ccac8f111e0e437ed5e0f853f9da4targetblankccd223ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/ccd223b2ed4ccac8f111e0e437ed5e0f853f9da4" target="_blank">ccd223b</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree4609330edd1613f67c665fa4db67f4218e7f19b7targetblank4609330a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/4609330edd1613f67c665fa4db67f4218e7f19b7" target="_blank">4609330</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeccd223b2ed4ccac8f111e0e437ed5e0f853f9da4targetblankccd223ba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree4609330edd1613f67c665fa4db67f4218e7f19b7targetblank4609330a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/ccd223b2ed4ccac8f111e0e437ed5e0f853f9da4" target="_blank">ccd223b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/4609330edd1613f67c665fa4db67f4218e7f19b7" target="_blank">4609330</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/4609330edd1613f67c665fa4db67f4218e7f19b7/analysis/2023.Rmd" target="_blank">4609330</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-05-09
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/712224ea364df0c85eb839dc437300b0cb9d47e4/docs/2023.html" target="_blank">712224e</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-05-04
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1565,9 +1599,9 @@ blockquote {
 <h3>1. Distribution of trans signals</h3>
 32/199 modules were found to have at least one significant trans signal in GTEx blood. In contrast, 102/166 modules were found to have trans-eQTLs in DGN. Most signals were observed in module 135 with 105 SNPs in GTEx (module 51 with 695 SNPs in DGN).
 <div class="figure" style="text-align: center">
-<img src="assets/mod_dist.png" alt="Number of significant SNPs across modules"  />
+<img src="assets/mod_dist.png" alt="Number of significant SNPs across modules (08_mod_dist.R)"  />
 <p class="caption">
-Number of significant SNPs across modules
+Number of significant SNPs across modules (08_mod_dist.R)
 </p>
 </div>
 <p>
@@ -1609,9 +1643,9 @@ liangend
 </div>
 Most signals were found on chromosome 3. In GTEx blood, there are significant 108 SNPs from chr3 (1237 SNPs from chr3 in DGN). Out of these 108 SNPs, 105 SNPs are relative to module 135 (652/1237 SNPs from chr3 are relative to module 51 in DGN).
 <div class="figure" style="text-align: center">
-<img src="assets/chr_dist.png" alt="Number of significant SNPs across chromosomes"  />
+<img src="assets/chr_dist.png" alt="Number of significant SNPs across chromosomes (08_mod_dist.R)"  />
 <p class="caption">
-Number of significant SNPs across chromosomes
+Number of significant SNPs across chromosomes (08_mod_dist.R)
 </p>
 </div>
 <p>
@@ -1706,9 +1740,9 @@ liangend
 <h3>3. Simulation of the effect of # genes and samples on the detection of significant modules</h3>
 <p>I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.15. The genotype of the SNP was randomly generated for 10/100/300/500/700/1000/2000 individuals. Expression of other genes were generated from N(0, 1). In total 1000 simulations were conducted for each scenario.</p>
 <div class="figure" style="text-align: center">
-<img src="assets/null_p_gene100.png" alt="Null p values for gene module with 100 genes (no causal genes were simulated)"  />
+<img src="assets/null_p_gene100.png" alt="Null p values for gene module with 100 genes (no causal genes were simulated; 07_sim_ana.R)"  />
 <p class="caption">
-Null p values for gene module with 100 genes (no causal genes were simulated)
+Null p values for gene module with 100 genes (no causal genes were simulated; 07_sim_ana.R)
 </p>
 </div>
 <p>
@@ -1747,6 +1781,12 @@ liangend
 </tbody>
 </table>
 </div>
+</div>
+<div class="figure" style="text-align: center">
+<img src="assets/null_p_hist_gene100.png" alt="Null p values for gene module with 100 genes (no causal genes were simulated)"  />
+<p class="caption">
+Null p values for gene module with 100 genes (no causal genes were simulated)
+</p>
 </div>
 <div class="figure" style="text-align: center">
 <img src="assets/null_p_gene200.png" alt="Null p values for gene module with 200 genes (no causal genes were simulated)"  />
@@ -1790,6 +1830,12 @@ liangend
 </tbody>
 </table>
 </div>
+</div>
+<div class="figure" style="text-align: center">
+<img src="assets/null_p_hist_gene200.png" alt="Null p values for gene module with 200 genes (no causal genes were simulated)"  />
+<p class="caption">
+Null p values for gene module with 200 genes (no causal genes were simulated)
+</p>
 </div>
 Type I error rate of PCO ACAT under different scenarios
 <div class="figure" style="text-align: center">
@@ -1980,12 +2026,12 @@ liangend
 </div>
 </div>
 </div>
-<div id="summary-of-7-tissues" class="section level3">
-<h3>6. Summary of 7 tissues</h3>
+<div id="summary-of-11-tissues" class="section level3">
+<h3>6. Summary of 11 tissues</h3>
 <div class="figure" style="text-align: center">
-<img src="assets/basic_stats.png" alt="Summary of each tissue (10_sum_7tissues.R)"  />
+<img src="assets/basic_stats.png" alt="Summary of each tissue (10_sum_11tissues.R)"  />
 <p class="caption">
-Summary of each tissue (10_sum_7tissues.R)
+Summary of each tissue (10_sum_11tissues.R)
 </p>
 </div>
 <p>
@@ -2010,6 +2056,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/bf2c1ff2465f6c5b94f4e8f8173be70cb0690b17/docs/assets/basic_stats.png" target="_blank">bf2c1ff</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-05-04
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/liangend/Trans_WIP/blob/459110b821e87af81ab3691591e88281e1d6bb74/docs/assets/basic_stats.png" target="_blank">459110b</a>
@@ -2048,9 +2105,9 @@ liangend
 </div>
 </div>
 <div class="figure" style="text-align: center">
-<img src="assets/sig_summary.png" alt="Significant modules and SNPs (10_sum_7tissues.R)"  />
+<img src="assets/sig_summary.png" alt="Significant modules and SNPs (10_sum_11tissues.R)"  />
 <p class="caption">
-Significant modules and SNPs (10_sum_7tissues.R)
+Significant modules and SNPs (10_sum_11tissues.R)
 </p>
 </div>
 <p>
@@ -2089,6 +2146,16 @@ liangend
 </tbody>
 </table>
 </div>
+</div>
+</div>
+<div id="using-snps-with-maf-0.01-for-muscle" class="section level3">
+<h3>7. Using SNPs with MAF &gt; 0.01 for muscle</h3>
+6,380,580 SNPs with MAF &gt; 0.05; 10,403,248 SNPs with MAF &gt; 0.01.
+<div class="figure" style="text-align: center">
+<img src="assets/maf_comp.png" alt="Module FDR and significant SNP-module pairs (11_maf_comp.R)"  />
+<p class="caption">
+Module FDR and significant SNP-module pairs (11_maf_comp.R)
+</p>
 </div>
 </div>
 </div>
@@ -3052,16 +3119,16 @@ other attached packages:
 [1] workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.7        rstudioapi_0.13   whisker_0.4       knitr_1.38       
- [5] magrittr_2.0.1    R6_2.5.0          rlang_1.1.0       fansi_0.5.0      
- [9] highr_0.9         stringr_1.4.0     tools_4.1.0       xfun_0.30        
-[13] utf8_1.2.1        cli_3.6.0         git2r_0.28.0      jquerylib_0.1.4  
-[17] htmltools_0.5.1.1 ellipsis_0.3.2    rprojroot_2.0.2   yaml_2.2.1       
-[21] digest_0.6.27     tibble_3.1.2      lifecycle_1.0.3   crayon_1.4.1     
-[25] later_1.2.0       sass_0.4.0        vctrs_0.6.1       promises_1.2.0.1 
-[29] fs_1.5.0          glue_1.4.2        evaluate_0.15     rmarkdown_2.13   
-[33] stringi_1.6.2     bslib_0.2.5.1     compiler_4.1.0    pillar_1.6.1     
-[37] jsonlite_1.7.2    httpuv_1.6.1      pkgconfig_2.0.3  </code></pre>
+ [1] Rcpp_1.0.10       rstudioapi_0.13   whisker_0.4       knitr_1.38       
+ [5] magrittr_2.0.3    R6_2.5.1          rlang_1.1.1       fansi_1.0.4      
+ [9] highr_0.9         stringr_1.5.0     tools_4.1.0       xfun_0.30        
+[13] utf8_1.2.3        cli_3.6.1         git2r_0.28.0      jquerylib_0.1.4  
+[17] htmltools_0.5.1.1 rprojroot_2.0.2   yaml_2.2.1        digest_0.6.27    
+[21] tibble_3.2.1      lifecycle_1.0.3   later_1.2.0       sass_0.4.0       
+[25] vctrs_0.6.2       promises_1.2.0.1  fs_1.5.0          glue_1.6.2       
+[29] evaluate_0.15     rmarkdown_2.13    stringi_1.7.12    bslib_0.2.5.1    
+[33] compiler_4.1.0    pillar_1.9.0      jsonlite_1.7.2    httpuv_1.6.1     
+[37] pkgconfig_2.0.3  </code></pre>
 </div>
 </div>
 </div>
