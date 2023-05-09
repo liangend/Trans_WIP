@@ -24,12 +24,12 @@ blockquote {
 
 ### 1. Distribution of trans signals
 32/199 modules were found to have at least one significant trans signal in GTEx blood. In contrast, 102/166 modules were found to have trans-eQTLs in DGN. Most signals were observed in module 135 with 105 SNPs in GTEx (module 51 with 695 SNPs in DGN).
-```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across modules"}
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across modules (08_mod_dist.R)"}
 knitr::include_graphics(c("assets/mod_dist.png"), error = FALSE)
 ```
 
 Most signals were found on chromosome 3. In GTEx blood, there are significant 108 SNPs from chr3 (1237 SNPs from chr3 in DGN). Out of these 108 SNPs, 105 SNPs are relative to module 135 (652/1237 SNPs from chr3 are relative to module 51 in DGN).
-```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across chromosomes"}
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across chromosomes (08_mod_dist.R)"}
 knitr::include_graphics(c("assets/chr_dist.png"), error = FALSE)
 ```
 Genes in module 135 of GTEx: AURKC, HKR1, ZNF134, ZNF135, ZNF211, ZNF256, ZNF304, ZNF329, ZNF347, ZNF418, ZNF543, ZNF544, ZNF548, ZNF549, ZNF550, ZNF551, ZNF585B, ZNF606, ZNF671, ZNF772, ZNF776, ZSCAN18
@@ -47,12 +47,20 @@ knitr::include_graphics(c("assets/gtex_dgn_rep.png"), error = FALSE)
 ### 3. Simulation of the effect of # genes and samples on the detection of significant modules
 I simulated a module with 100/200 genes, with one gene causally regulated by a SNP. Heritability of the gene was set to be 0.15. The genotype of the SNP was randomly generated for 10/100/300/500/700/1000/2000 individuals. Expression of other genes were generated from N(0, 1). In total 1000 simulations were conducted for each scenario.
 
-```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 100 genes (no causal genes were simulated)"}
+```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 100 genes (no causal genes were simulated; 07_sim_ana.R)"}
 knitr::include_graphics(c("assets/null_p_gene100.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 100 genes (no causal genes were simulated)"}
+knitr::include_graphics(c("assets/null_p_hist_gene100.png"), error = FALSE)
 ```
 
 ```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 200 genes (no causal genes were simulated)"}
 knitr::include_graphics(c("assets/null_p_gene200.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Null p values for gene module with 200 genes (no causal genes were simulated)"}
+knitr::include_graphics(c("assets/null_p_hist_gene200.png"), error = FALSE)
 ```
 
 Type I error rate of PCO ACAT under different scenarios
@@ -84,14 +92,21 @@ I divided large modules (module size > half of the sample size) into smaller mod
 knitr::include_graphics(c("assets/mod_div_comp.png"), error = FALSE)
 ```
 
-### 6. Summary of 7 tissues
-```{r echo=F, fig.align='center', fig.cap="Summary of each tissue (10_sum_7tissues.R)"}
+### 6. Summary of 11 tissues
+```{r echo=F, fig.align='center', fig.cap="Summary of each tissue (10_sum_11tissues.R)"}
 knitr::include_graphics(c("assets/basic_stats.png"), error = FALSE)
 ```
 
-```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs (10_sum_7tissues.R)"}
+```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs (10_sum_11tissues.R)"}
 knitr::include_graphics(c("assets/sig_summary.png"), error = FALSE)
 ```
+
+### 7. Using SNPs with MAF > 0.01 for muscle
+6,380,580 SNPs with MAF > 0.05; 10,403,248 SNPs with MAF > 0.01.
+```{r echo=F, fig.align='center', fig.cap="Module FDR and significant SNP-module pairs (11_maf_comp.R)"}
+knitr::include_graphics(c("assets/maf_comp.png"), error = FALSE)
+```
+
 
 ## 4/12/2023
 
