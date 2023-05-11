@@ -100,6 +100,10 @@ knitr::include_graphics(c("assets/basic_stats.png"), error = FALSE)
 ```{r echo=F, fig.align='center', fig.cap="Significant modules and SNPs (10_sum_11tissues.R)"}
 knitr::include_graphics(c("assets/sig_summary.png"), error = FALSE)
 ```
+Most significant pairs were observed from testis, similar as GTEx finding the most trans signals from testis. In total 3361 significant SNP-module pairs found from 28 modules. However, most signals were found between module 168 and chr17 (2855 pairs). Comparing to trans-eGenes found in GTEx (49 genes), 28 modules contains 959 genes, 19 of which overlapped with GTEx ones.
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNPs across modules (08_mod_dist.R)"}
+knitr::include_graphics(c("assets/snp_dist_testis.png"), error = FALSE)
+```
 
 ### 7. Using SNPs with MAF > 0.01 for muscle
 6,380,580 SNPs with MAF > 0.05; 10,403,248 SNPs with MAF > 0.01.
@@ -107,6 +111,17 @@ knitr::include_graphics(c("assets/sig_summary.png"), error = FALSE)
 knitr::include_graphics(c("assets/maf_comp.png"), error = FALSE)
 ```
 
+### 8. Trans signals overlapping with cis signals
+Across all 11 tissues, on average 63.3% of trans signal overlap with cis-eQTLs; 25.2% overlap with cis-sQTLs; 64.9% overlap with either cis-eQTLs or cis-sQTLs.
+```{r echo=F, fig.align='center', fig.cap="Overlapping with cis signals (12_overlap_cis.R)"}
+knitr::include_graphics(c("assets/overlap_cis.png"), error = FALSE)
+```
+
+### 9. Colocalization with GWAS signals
+
+```{r echo=F, fig.align='center', fig.cap="Colocalization with 4 GWAS traits (13_gwas_coloc.R)"}
+knitr::include_graphics(c("assets/gwas_coloc.png"), error = FALSE)
+```
 
 ## 4/12/2023
 
