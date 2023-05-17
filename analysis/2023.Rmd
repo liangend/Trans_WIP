@@ -118,9 +118,14 @@ knitr::include_graphics(c("assets/overlap_cis.png"), error = FALSE)
 ```
 
 ### 9. Colocalization with GWAS signals
-
+Trans-eQTL loci are defined as 100kb flanking regions around leading SNPs.
 ```{r echo=F, fig.align='center', fig.cap="Colocalization with 4 GWAS traits (13_gwas_coloc.R)"}
 knitr::include_graphics(c("assets/gwas_coloc.png"), error = FALSE)
+```
+
+Colocalization with 29 blood relevant traits (red blood cell count, platelet count, neutrophil count, etc.) and 3 autoimmune diseases (ulcerative colitis, Crohn's disease and inflammatory bowel disease). Testis contained the most colocalization (27 traits with at least one colocalization), followed by skin (18), blood (15), nerve (11) and thyroid (10). But blood had the highest colocalization proportion (# cololization / # of trans-eQTL loci).
+```{r echo=F, fig.align='center', fig.cap="Colocalization with blood and autoimmune disease traits (13_gwas_coloc.R)"}
+knitr::include_graphics(c("assets/blood_coloc_prop.png"), error = FALSE)
 ```
 
 ## 4/12/2023
