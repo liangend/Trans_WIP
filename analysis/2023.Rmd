@@ -84,6 +84,10 @@ Use the method in GTEx to find "eModule":
 knitr::include_graphics(c("assets/n_sig_mod.png"), error = FALSE)
 ```
 
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNP-module pairs detected (99_scripts/08_all_sig.R)"}
+knitr::include_graphics(c("assets/n_sig_comp.png"), error = FALSE)
+```
+
 Based on permutation FDR correction, there are 108 significant SNP-module pairs from 4 chromosomes and 6 modules, 100 of which were between chr3 and mod135 (nominal p-value threshold = 4.6e-9). 
 
 ### 5. Divide large modules into smaller ones
@@ -123,7 +127,7 @@ Trans-eQTL loci are defined as 100kb flanking regions around leading SNPs.
 knitr::include_graphics(c("assets/gwas_coloc.png"), error = FALSE)
 ```
 
-Colocalization with 29 blood relevant traits (red blood cell count, platelet count, neutrophil count, etc.) and 3 autoimmune diseases (ulcerative colitis, Crohn's disease and inflammatory bowel disease). Testis contained the most colocalization (27 traits with at least one colocalization), followed by skin (18), blood (15), nerve (11) and thyroid (10). But blood had the highest colocalization proportion (# cololization / # of trans-eQTL loci).
+Colocalization with 29 blood relevant traits (red blood cell count, platelet count, neutrophil count, etc.) and 3 autoimmune diseases (ulcerative colitis, Crohn's disease and inflammatory bowel disease). Testis contained the most colocalization (27 traits with at least one colocalization), followed by skin (18), blood (15), nerve (11) and thyroid (10). But blood had the highest colocalization proportion (# cololization / # of trans-eQTL loci). "Average" is the average proportion of of coloc across all traits, while "Unique" is the total number of unique loci colocalized with at least one GWAS signal across all traits.
 ```{r echo=F, fig.align='center', fig.cap="Colocalization with blood and autoimmune disease traits (13_gwas_coloc.R)"}
 knitr::include_graphics(c("assets/blood_coloc_prop.png"), error = FALSE)
 ```
