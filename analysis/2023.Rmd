@@ -132,6 +132,16 @@ Colocalization with 29 blood relevant traits (red blood cell count, platelet cou
 knitr::include_graphics(c("assets/blood_coloc_prop.png"), error = FALSE)
 ```
 
+I did the heritability enrichment analysis for one colocalized signal of trans-eQTL (on chr3 associated with module 7) in blood.  Among 32 traits, h2 enrichment of 22 are shown below (p < 0.05). 6 of them reached significance after Bonferroni correction, and 8 of them have a corresponding colocalization signal (PP4 > 0.5).
+```{r echo=F, fig.align='center', fig.cap="Heritability enrichment of trans signal on module 7 (14_h2_enrich.R)"}
+knitr::include_graphics(c("assets/ldsc_blood_coloc.png"), error = FALSE)
+```
+For example, I identified an interesting colocalization between MPV (mean platelet volume) associated locus near ARHGEF3 and a trans-eQTL of module 7, which associated with platelet activation and hemostasis (PP4 = 0.68).
+```{r echo=F, fig.align='center', fig.cap="Colocalization between MPV GWAS and trans signal on module 7 (14_h2_enrich.R)"}
+knitr::include_graphics(c("assets/coloc_MPV_blood.png"), error = FALSE)
+```
+
+
 ## 4/12/2023
 
 ### 1. New read count results based on adjusted GENCODE gtf (for GTEx V8)
