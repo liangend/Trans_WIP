@@ -121,6 +121,11 @@ Across all 11 tissues, on average 63.3% of trans signal overlap with cis-eQTLs; 
 knitr::include_graphics(c("assets/overlap_cis.png"), error = FALSE)
 ```
 
+Across 6 tissues with data of eQTL, sQTL, mQTL and RNA editing, mQTL did not add too much extra information.
+```{r echo=F, fig.align='center', fig.cap="Overlapping with cis signals (12_overlap_cis.R)"}
+knitr::include_graphics(c("assets/overlap_cis2.png"), error = FALSE)
+```
+
 ### 9. Colocalization with GWAS signals
 Trans-eQTL loci are defined as 100kb flanking regions around leading SNPs.
 ```{r echo=F, fig.align='center', fig.cap="Colocalization with 4 GWAS traits (13_gwas_coloc.R)"}
@@ -139,6 +144,46 @@ knitr::include_graphics(c("assets/ldsc_blood_coloc.png"), error = FALSE)
 For example, I identified an interesting colocalization between MPV (mean platelet volume) associated locus near ARHGEF3 and a trans-eQTL of module 7, which associated with platelet activation and hemostasis (PP4 = 0.68).
 ```{r echo=F, fig.align='center', fig.cap="Colocalization between MPV GWAS and trans signal on module 7 (14_h2_enrich.R)"}
 knitr::include_graphics(c("assets/coloc_MPV_blood.png"), error = FALSE)
+```
+
+### 10. Model calibration
+Given the limited number of significant SNPs I observe, I tried to include different number of covariates in the model to see which gives the most significant signals. I tried 4 different scenarios on muscle: 1) 60 expression PCs + 5 genotype PCs + 3 covariates; 2) 10 expression PCs + 5 genotype PCs + 3 covariates; 3) 5 genotype PCs + 3 covariates; 4) No covariates.
+
+```{r echo=F, fig.align='center', fig.cap="QQ plot of p values for chr22 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/qq_obs_muscle_chr22.png"), error = FALSE)
+```
+
+Number of significant eModules and eSNPs:
+
+1) 68 covaraites: 33 eModules, 417 eSNPs;
+
+3) 8 covaraites: 3 eModules, 80 eSNPs;
+
+4) No covaraites: 274 eModules, 2,430,382 eSNPs.
+
+Null p distribution
+```{r echo=F, fig.align='center', fig.cap="QQ plot of p values for chr20 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/qq_muscle_chr20.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Histogram of p values for chr20 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/histP_muscle_chr20.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="QQ plot of p values for chr21 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/qq_muscle_chr21.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Histogram of p values for chr21 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/histP_muscle_chr21.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="QQ plot of p values for chr22 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/qq_muscle_chr22.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Histogram of p values for chr22 (15_pval_calib.R)"}
+knitr::include_graphics(c("assets/histP_muscle_chr22.png"), error = FALSE)
 ```
 
 
