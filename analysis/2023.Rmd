@@ -157,6 +157,8 @@ Number of significant eModules and eSNPs:
 
 1) 68 covaraites: 33 eModules, 417 eSNPs;
 
+2) 18 covaraites: 10 eModules, 180 eSNPs;
+
 3) 8 covaraites: 3 eModules, 80 eSNPs;
 
 4) No covaraites: 274 eModules, 2,430,382 eSNPs.
