@@ -20,6 +20,33 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 6/21/2023
+### 1. Analyzing GTEx using EUR only
+Fewer signals were found when decreasing the sample size from all (702) to EUR only (599) for muscle. Similarly for blood (670 vs 574).
+```{r echo=F, fig.align='center', fig.cap="Number of significant modules and pairs using all/EUR individuals (16_all_vs_eur_ind.R)"}
+knitr::include_graphics(c("assets/eur_vs_all_pco.png"), error = FALSE)
+```
+
+For DGN, I randomly subset 574 individuals (equal to GTEx blood EUR sample size), and compared the univariate results. DGN dataset had more small p values.
+```{r echo=F, fig.align='center', fig.cap="Number of significant SNP-gene pairs using the same sample size for GTEx blood and DGN (16_all_vs_eur_ind.R)"}
+knitr::include_graphics(c("assets/gtex_dgn_univar.png"), error = FALSE)
+```
+
+### 2. Geuvadis dataset analysis
+Geuvadis dataset contains 358 individuals and 12,382 genes for analysis. The gene expression count was not corrected for mappability. Out of 211 gene modules, there are 159 significant eModules and 13,257 significant SNP-module pairs. The much more signals detected could be due to mappability or data quality.
+
+### 3. Controlling mappability or not for muscle
+When not controlling mappability for muscle, I used the normalized TPM from GTEx portal directly to conduct Trans-PCO. To make them comparable, I included the same genes in the analysis. The total number of gene modules is 292 (compared to 301 when controlling mappability).
+```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (16_all_vs_eur_ind.R)"}
+knitr::include_graphics(c("assets/mappability_muscle.png"), error = FALSE)
+```
+
+### 4. Other comparison for DGN
+
+```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (16_all_vs_eur_ind.R)"}
+knitr::include_graphics(c("assets/dgn_comp.png"), error = FALSE)
+```
+
 ## 5/1/2023
 
 ### 1. Distribution of trans signals
