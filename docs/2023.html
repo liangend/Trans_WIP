@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-06-21
+<strong>Last updated:</strong> 2023-06-26
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree66419b724f3ec01a318770f102339091342a094ftargetblank66419b7a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/66419b724f3ec01a318770f102339091342a094f" target="_blank">66419b7</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecfe9563a1eb35f911357cb06b3460fa1e8551723targetblankcfe9563a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/cfe9563a1eb35f911357cb06b3460fa1e8551723" target="_blank">cfe9563</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree66419b724f3ec01a318770f102339091342a094ftargetblank66419b7a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecfe9563a1eb35f911357cb06b3460fa1e8551723targetblankcfe9563a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/66419b724f3ec01a318770f102339091342a094f" target="_blank">66419b7</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/cfe9563a1eb35f911357cb06b3460fa1e8551723" target="_blank">cfe9563</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/cfe9563a1eb35f911357cb06b3460fa1e8551723/analysis/2023.Rmd" target="_blank">cfe9563</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-26
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/33e35206689f3ab58f5879921f93ecdf69c48215/docs/2023.html" target="_blank">33e3520</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-21
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1859,12 +1893,86 @@ Fewer signals were found when decreasing the sample size from all (702) to EUR o
 Number of significant modules and pairs using all/EUR individuals (16_all_vs_eur_ind.R)
 </p>
 </div>
-For DGN, I randomly subset 574 individuals (equal to GTEx blood EUR sample size), and compared the univariate results. DGN dataset had more small p values.
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-eur_vs_all_pco">
+Past versions of eur_vs_all_pco.png
+</button>
+</p>
+<div id="fig-eur_vs_all_pco" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/e77de6d1b68afef38b7ee1bad3c36419a713bf4d/docs/assets/eur_vs_all_pco.png" target="_blank">e77de6d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+For DGN, I randomly subset 574 individuals (equal to GTEx blood EUR sample size), and compared the univariate results. Among all the common genes, DGN dataset had more small p values. For number of eGenes, DGN had 177 and GTEx had 23 (fdr &lt; 0.1).
 <div class="figure" style="text-align: center">
 <img src="assets/gtex_dgn_univar.png" alt="Number of significant SNP-gene pairs using the same sample size for GTEx blood and DGN (16_all_vs_eur_ind.R)"  />
 <p class="caption">
 Number of significant SNP-gene pairs using the same sample size for GTEx blood and DGN (16_all_vs_eur_ind.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-gtex_dgn_univar">
+Past versions of gtex_dgn_univar.png
+</button>
+</p>
+<div id="fig-gtex_dgn_univar" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/e77de6d1b68afef38b7ee1bad3c36419a713bf4d/docs/assets/gtex_dgn_univar.png" target="_blank">e77de6d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div id="geuvadis-dataset-analysis" class="section level3">
@@ -1880,6 +1988,43 @@ When not controlling mappability for muscle, I used the normalized TPM from GTEx
 Control mappability or not for muscle (16_all_vs_eur_ind.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-mappability_muscle">
+Past versions of mappability_muscle.png
+</button>
+</p>
+<div id="fig-mappability_muscle" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/e77de6d1b68afef38b7ee1bad3c36419a713bf4d/docs/assets/mappability_muscle.png" target="_blank">e77de6d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="other-comparison-for-dgn" class="section level3">
 <h3>4. Other comparison for DGN</h3>
@@ -1887,6 +2032,64 @@ Control mappability or not for muscle (16_all_vs_eur_ind.R)
 <img src="assets/dgn_comp.png" alt="Control mappability or not for muscle (16_all_vs_eur_ind.R)"  />
 <p class="caption">
 Control mappability or not for muscle (16_all_vs_eur_ind.R)
+</p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-dgn_comp">
+Past versions of dgn_comp.png
+</button>
+</p>
+<div id="fig-dgn_comp" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/e77de6d1b68afef38b7ee1bad3c36419a713bf4d/docs/assets/dgn_comp.png" target="_blank">e77de6d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-06-21
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="functional-enrichment" class="section level3">
+<h3>5. Functional enrichment</h3>
+<div class="figure" style="text-align: center">
+<img src="assets/chrom_enrich_blood.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<p class="caption">
+Control mappability or not for muscle (06_trans_enrich.R)
+</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="assets/chrom_enrich_muscle.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<p class="caption">
+Control mappability or not for muscle (06_trans_enrich.R)
+</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="assets/chrom_enrich_thyroid.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<p class="caption">
+Control mappability or not for muscle (06_trans_enrich.R)
 </p>
 </div>
 </div>
