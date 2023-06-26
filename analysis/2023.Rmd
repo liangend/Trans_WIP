@@ -27,7 +27,7 @@ Fewer signals were found when decreasing the sample size from all (702) to EUR o
 knitr::include_graphics(c("assets/eur_vs_all_pco.png"), error = FALSE)
 ```
 
-For DGN, I randomly subset 574 individuals (equal to GTEx blood EUR sample size), and compared the univariate results. DGN dataset had more small p values.
+For DGN, I randomly subset 574 individuals (equal to GTEx blood EUR sample size), and compared the univariate results. Among all the common genes, DGN dataset had more small p values. For number of eGenes, DGN had 177 and GTEx had 23 (fdr < 0.1).
 ```{r echo=F, fig.align='center', fig.cap="Number of significant SNP-gene pairs using the same sample size for GTEx blood and DGN (16_all_vs_eur_ind.R)"}
 knitr::include_graphics(c("assets/gtex_dgn_univar.png"), error = FALSE)
 ```
@@ -45,6 +45,19 @@ knitr::include_graphics(c("assets/mappability_muscle.png"), error = FALSE)
 
 ```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (16_all_vs_eur_ind.R)"}
 knitr::include_graphics(c("assets/dgn_comp.png"), error = FALSE)
+```
+
+### 5. Functional enrichment
+```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+knitr::include_graphics(c("assets/chrom_enrich_blood.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+knitr::include_graphics(c("assets/chrom_enrich_muscle.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+knitr::include_graphics(c("assets/chrom_enrich_thyroid.png"), error = FALSE)
 ```
 
 ## 5/1/2023
