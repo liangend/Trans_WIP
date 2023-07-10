@@ -60,6 +60,18 @@ knitr::include_graphics(c("assets/chrom_enrich_muscle.png"), error = FALSE)
 knitr::include_graphics(c("assets/chrom_enrich_thyroid.png"), error = FALSE)
 ```
 
+### 6. Gene expression correlation
+```{r echo=F, fig.align='center', fig.cap="The correlation of gene expression (TPM) for 4 GTEx tissues (17_ex_cor_heat.R)"}
+knitr::include_graphics(c("assets/gtex_ex_heat.png"), error = FALSE)
+```
+Average correlation: 0.844 (muscle), 0.769 (blood), 0.816 (thyroid), 0.875 (testis)
+
+```{r echo=F, fig.align='center', fig.cap="The correlation of gene expression (TPM) for Geuvadis (17_ex_cor_heat.R)"}
+knitr::include_graphics(c("assets/geuv_ex_heat.png"), error = FALSE)
+```
+Average correlation = 0.865
+
+
 ## 5/1/2023
 
 ### 1. Distribution of trans signals
