@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-07-10
+<strong>Last updated:</strong> 2023-07-24
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree2a93439b4c10090a9b2a7a1fe6618aef642d64d3targetblank2a93439a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/2a93439b4c10090a9b2a7a1fe6618aef642d64d3" target="_blank">2a93439</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree383ce2686f51a19b06d3639d1e1352e382cb478ctargetblank383ce26a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/383ce2686f51a19b06d3639d1e1352e382cb478c" target="_blank">383ce26</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree2a93439b4c10090a9b2a7a1fe6618aef642d64d3targetblank2a93439a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree383ce2686f51a19b06d3639d1e1352e382cb478ctargetblank383ce26a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/2a93439b4c10090a9b2a7a1fe6618aef642d64d3" target="_blank">2a93439</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/383ce2686f51a19b06d3639d1e1352e382cb478c" target="_blank">383ce26</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/383ce2686f51a19b06d3639d1e1352e382cb478c/analysis/2023.Rmd" target="_blank">383ce26</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-07-24
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/84bb27d26bd562f98534ffae02afabdd11ecad4c/docs/2023.html" target="_blank">84bb27d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-07-10
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1917,6 +1951,27 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>7/24/2023</h2>
+<div id="protein-qtl-analysis" class="section level3">
+<h3>Protein QTL analysis</h3>
+Summary stats of AGES cohort from Gudjonsson et al. (2022; Nat Commun). 5368 individuals, 7,506,463 SNPs, 4782 aptamers in total. 27 modules (Emilsson et al., 2018) consisting of 4113 aptamers (corresponding to 3487 protein/protein complex) were analyzed using trans-PCO.
+<div class="figure" style="text-align: center">
+<img src="assets/prot_mod_div.png" alt="Module division of protein (01_signal_summ.R)"  />
+<p class="caption">
+Module division of protein (01_signal_summ.R)
+</p>
+</div>
+A total of 83,218 significant (p &lt; 5e-8/27) SNP-module pairs were found in 679 loci (200 kb window around the leading signal). Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
+<div class="figure" style="text-align: center">
+<img src="assets/prot_signal_dist.png" alt="Protein trans signal distribution (01_signal_summ.R)"  />
+<p class="caption">
+Protein trans signal distribution (01_signal_summ.R)
+</p>
+</div>
+<p>Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p &lt; 5e-8/4728) SNP-protein pairs. 171,628 of them are trans signals (on different chromosomes with the target gene) in 1031 loci (200 kb window around the leading signal).</p>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>6/21/2023</h2>
 <div id="analyzing-gtex-using-eur-only" class="section level3">
 <h3>1. Analyzing GTEx using EUR only</h3>
@@ -2085,9 +2140,9 @@ liangend
 <div id="other-comparison-for-dgn" class="section level3">
 <h3>4. Other comparison for DGN</h3>
 <div class="figure" style="text-align: center">
-<img src="assets/dgn_comp.png" alt="Control mappability or not for muscle (16_all_vs_eur_ind.R)"  />
+<img src="assets/dgn_comp.png" alt="DGN signals (16_all_vs_eur_ind.R)"  />
 <p class="caption">
-Control mappability or not for muscle (16_all_vs_eur_ind.R)
+DGN signals (16_all_vs_eur_ind.R)
 </p>
 </div>
 <p>
@@ -2131,9 +2186,9 @@ liangend
 <div id="functional-enrichment" class="section level3">
 <h3>5. Functional enrichment</h3>
 <div class="figure" style="text-align: center">
-<img src="assets/chrom_enrich_blood.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<img src="assets/chrom_enrich_blood.png" alt="Blood signal chr state enrichment (06_trans_enrich.R)"  />
 <p class="caption">
-Control mappability or not for muscle (06_trans_enrich.R)
+Blood signal chr state enrichment (06_trans_enrich.R)
 </p>
 </div>
 <p>
@@ -2174,9 +2229,9 @@ liangend
 </div>
 </div>
 <div class="figure" style="text-align: center">
-<img src="assets/chrom_enrich_muscle.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<img src="assets/chrom_enrich_muscle.png" alt="Muscle signal chr state enrichment (06_trans_enrich.R)"  />
 <p class="caption">
-Control mappability or not for muscle (06_trans_enrich.R)
+Muscle signal chr state enrichment (06_trans_enrich.R)
 </p>
 </div>
 <p>
@@ -2217,9 +2272,9 @@ liangend
 </div>
 </div>
 <div class="figure" style="text-align: center">
-<img src="assets/chrom_enrich_thyroid.png" alt="Control mappability or not for muscle (06_trans_enrich.R)"  />
+<img src="assets/chrom_enrich_thyroid.png" alt="Thyroid signal chr state enrichment (06_trans_enrich.R)"  />
 <p class="caption">
-Control mappability or not for muscle (06_trans_enrich.R)
+Thyroid signal chr state enrichment (06_trans_enrich.R)
 </p>
 </div>
 <p>
@@ -2259,6 +2314,12 @@ liangend
 </table>
 </div>
 </div>
+<div class="figure" style="text-align: center">
+<img src="assets/chrom_enrich_geuv.png" alt="Geuvadis signal chr state enrichment (06_trans_enrich.R)"  />
+<p class="caption">
+Geuvadis signal chr state enrichment (06_trans_enrich.R)
+</p>
+</div>
 </div>
 <div id="gene-expression-correlation" class="section level3">
 <h3>6. Gene expression correlation</h3>
@@ -2268,6 +2329,43 @@ liangend
 The correlation of gene expression (TPM) for 4 GTEx tissues (17_ex_cor_heat.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-gtex_ex_heat">
+Past versions of gtex_ex_heat.png
+</button>
+</p>
+<div id="fig-gtex_ex_heat" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/75ee6e5358e2f9942722845a04fb18024bc95ca6/docs/assets/gtex_ex_heat.png" target="_blank">75ee6e5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-07-10
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Average correlation: 0.844 (muscle), 0.769 (blood), 0.816 (thyroid), 0.875 (testis)</p>
 <div class="figure" style="text-align: center">
 <img src="assets/geuv_ex_heat.png" alt="The correlation of gene expression (TPM) for Geuvadis (17_ex_cor_heat.R)"  />
@@ -2275,10 +2373,47 @@ The correlation of gene expression (TPM) for 4 GTEx tissues (17_ex_cor_heat.R)
 The correlation of gene expression (TPM) for Geuvadis (17_ex_cor_heat.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-geuv_ex_heat">
+Past versions of geuv_ex_heat.png
+</button>
+</p>
+<div id="fig-geuv_ex_heat" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/75ee6e5358e2f9942722845a04fb18024bc95ca6/docs/assets/geuv_ex_heat.png" target="_blank">75ee6e5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-07-10
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <p>Average correlation = 0.865</p>
 </div>
 </div>
-<div id="section-1" class="section level2">
+<div id="section-2" class="section level2">
 <h2>5/1/2023</h2>
 <div id="distribution-of-trans-signals" class="section level3">
 <h3>1. Distribution of trans signals</h3>
@@ -3713,7 +3848,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>4/12/2023</h2>
 <div id="new-read-count-results-based-on-adjusted-gencode-gtf-for-gtex-v8" class="section level3">
 <h3>1. New read count results based on adjusted GENCODE gtf (for GTEx V8)</h3>
@@ -4402,7 +4537,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-3" class="section level2">
+<div id="section-4" class="section level2">
 <h2>3/8/2023</h2>
 <div id="comparing-the-p-values-of-pco-and-acat-on-lilis-demo" class="section level3">
 <h3>1. Comparing the p values of PCO and ACAT on Lili’s demo</h3>
@@ -4453,7 +4588,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>2/21/2023</h2>
 <div id="summary" class="section level3">
 <h3>1. Summary</h3>
