@@ -20,6 +20,20 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 7/24/2023
+### Protein QTL analysis
+Summary stats of AGES cohort from Gudjonsson et al. (2022; Nat Commun). 5368 individuals, 7,506,463 SNPs, 4782 aptamers in total. 27 modules (Emilsson et al., 2018) consisting of 4113 aptamers (corresponding to 3487 protein/protein complex) were analyzed using trans-PCO. 
+```{r echo=F, fig.align='center', fig.cap="Module division of protein (01_signal_summ.R)"}
+knitr::include_graphics(c("assets/prot_mod_div.png"), error = FALSE)
+```
+
+A total of 83,218 significant (p < 5e-8/27) SNP-module pairs were found in 679 loci (200 kb window around the leading signal). Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
+```{r echo=F, fig.align='center', fig.cap="Protein trans signal distribution (01_signal_summ.R)"}
+knitr::include_graphics(c("assets/prot_signal_dist.png"), error = FALSE)
+```
+
+Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 171,628 of them are trans signals (on different chromosomes with the target gene) in 1031 loci (200 kb window around the leading signal). 
+
 ## 6/21/2023
 ### 1. Analyzing GTEx using EUR only
 Fewer signals were found when decreasing the sample size from all (702) to EUR only (599) for muscle. Similarly for blood (670 vs 574).
@@ -43,21 +57,25 @@ knitr::include_graphics(c("assets/mappability_muscle.png"), error = FALSE)
 
 ### 4. Other comparison for DGN
 
-```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (16_all_vs_eur_ind.R)"}
+```{r echo=F, fig.align='center', fig.cap="DGN signals (16_all_vs_eur_ind.R)"}
 knitr::include_graphics(c("assets/dgn_comp.png"), error = FALSE)
 ```
 
 ### 5. Functional enrichment
-```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+```{r echo=F, fig.align='center', fig.cap="Blood signal chr state enrichment (06_trans_enrich.R)"}
 knitr::include_graphics(c("assets/chrom_enrich_blood.png"), error = FALSE)
 ```
 
-```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+```{r echo=F, fig.align='center', fig.cap="Muscle signal chr state enrichment (06_trans_enrich.R)"}
 knitr::include_graphics(c("assets/chrom_enrich_muscle.png"), error = FALSE)
 ```
 
-```{r echo=F, fig.align='center', fig.cap="Control mappability or not for muscle (06_trans_enrich.R)"}
+```{r echo=F, fig.align='center', fig.cap="Thyroid signal chr state enrichment (06_trans_enrich.R)"}
 knitr::include_graphics(c("assets/chrom_enrich_thyroid.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Geuvadis signal chr state enrichment (06_trans_enrich.R)"}
+knitr::include_graphics(c("assets/chrom_enrich_geuv.png"), error = FALSE)
 ```
 
 ### 6. Gene expression correlation
