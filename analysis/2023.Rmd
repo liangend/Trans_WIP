@@ -32,7 +32,7 @@ A total of 83,218 significant (p < 5e-8/27) SNP-module pairs were found in 679 l
 knitr::include_graphics(c("assets/prot_signal_dist.png"), error = FALSE)
 ```
 
-Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 171,628 of them are trans signals (on different chromosomes with the target gene) in 1031 loci (200 kb window around the leading signal). 
+Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 171,628 of them are trans signals (on different chromosomes with the target gene) in 1031 loci (200 kb window around the leading signal). Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.
 
 ## 6/21/2023
 ### 1. Analyzing GTEx using EUR only
