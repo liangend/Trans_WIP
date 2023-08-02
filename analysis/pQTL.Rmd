@@ -42,7 +42,10 @@ knitr::include_graphics(c("assets/mod_size_cor.png"), error = FALSE)
 ### Comparing with univariate analysis
 Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes. Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.
 
-For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p < 5e-8/27), 3295/5077 (64.9%) has p value < univariate p.
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p < 5e-8/27), 3366/5077 (66.3%) has p value < univariate p. 3674/5077 with PCO p > 0 (some p = 0 due to precision issue).
+```{r echo=F, fig.align='center', fig.cap="Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)"}
+knitr::include_graphics(c("assets/minp_comp.png"), error = FALSE)
+```
 
 ### Heritability of protein
 For 4782 protein/protein complex, there are 3816 with h2 > 0. Mean h2 = 0.14, median = 0.12, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
