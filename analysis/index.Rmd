@@ -20,4 +20,5 @@ Welcome to my research website.
 
 ## Topics
 
-- Progress in 2023. [click](2023.html)
+- Progress in Trans-PCO on GTEx. [click](trans_gtex.html)
+- Progress in pQTL. [click](pQTL.html)

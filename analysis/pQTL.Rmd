@@ -1,0 +1,56 @@
+---
+title: ''
+output:
+  workflowr::wflow_html:
+              toc: true
+              toc_depth: 4
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{css style settings, echo = FALSE}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 14px;
+    border-left: 5px solid #eee;
+}
+```
+## 7/24/2023
+### Protein QTL analysis
+Summary stats of AGES cohort from Gudjonsson et al. (2022; Nat Commun). 5368 individuals, 7,506,463 SNPs, 4782 aptamers in total. 27 modules (Emilsson et al., 2018) consisting of 4113 aptamers (corresponding to 3487 protein/protein complex) were analyzed using trans-PCO. 
+```{r echo=F, fig.align='center', fig.cap="Module division of protein (01_signal_summ.R)"}
+knitr::include_graphics(c("assets/prot_mod_div.png"), error = FALSE)
+```
+
+A total of 83,218 significant (p < 5e-8/27) SNP-module pairs were found in 679 loci (200 kb window around the leading signal). Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
+```{r echo=F, fig.align='center', fig.cap="Protein trans signal distribution (01_signal_summ.R)"}
+knitr::include_graphics(c("assets/prot_signal_dist.png"), error = FALSE)
+```
+
+The cor between module size and number of associations = 0.52;
+The cor between module average correlation and number of associations = -0.26;
+The cor between module average correlation and module size  = -0.44
+```{r echo=F, fig.align='center', fig.cap="Protein trans signal distribution (01_signal_summ.R)"}
+knitr::include_graphics(c("assets/mod_size_cor.png"), error = FALSE)
+```
+
+### Comparing with univariate analysis
+Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes. Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.
+
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p < 5e-8/27), 3295/5077 (64.9%) has p value < univariate p.
+
+### Heritability of protein
+For 4782 protein/protein complex, there are 3816 with h2 > 0. Mean h2 = 0.14, median = 0.12, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
+```{r echo=F, fig.align='center', fig.cap="Protein heritability (03_h2.R)"}
+knitr::include_graphics(c("assets/h2_dist.png"), error = FALSE)
+```
+
+
+
+
+
