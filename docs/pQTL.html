@@ -488,24 +488,22 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree9e0f8babdfcdcb0c358174545b6b0d5ef76043fftargetblank9e0f8baa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/9e0f8babdfcdcb0c358174545b6b0d5ef76043ff" target="_blank">9e0f8ba</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecf2f5bae84a3b0a809f5fe23b35e82d2c500c30ctargetblankcf2f5baa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/cf2f5bae84a3b0a809f5fe23b35e82d2c500c30c" target="_blank">cf2f5ba</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree9e0f8babdfcdcb0c358174545b6b0d5ef76043fftargetblank9e0f8baa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecf2f5bae84a3b0a809f5fe23b35e82d2c500c30ctargetblankcf2f5baa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/9e0f8babdfcdcb0c358174545b6b0d5ef76043ff" target="_blank">9e0f8ba</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/cf2f5bae84a3b0a809f5fe23b35e82d2c500c30c" target="_blank">cf2f5ba</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
-Unstaged changes:
-    Deleted:    analysis/2023.Rmd
-
+working directory clean
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
@@ -543,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/cf2f5bae84a3b0a809f5fe23b35e82d2c500c30c/analysis/pQTL.Rmd" target="_blank">cf2f5ba</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/d2b879ee78ef0224a6306d7e1354427d4e57e971/docs/pQTL.html" target="_blank">d2b879e</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -674,11 +706,54 @@ The cor between module size and number of associations = 0.52; The cor between m
 Protein trans signal distribution (01_signal_summ.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-mod_size_cor">
+Past versions of mod_size_cor.png
+</button>
+</p>
+<div id="fig-mod_size_cor" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/24d3d2b38d6c69e7484290ba3fed2afed0e79c32/docs/assets/mod_size_cor.png" target="_blank">24d3d2b</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="comparing-with-univariate-analysis" class="section level3">
 <h3>Comparing with univariate analysis</h3>
 <p>Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p &lt; 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes. Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.</p>
-<p>For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p &lt; 5e-8/27), 3295/5077 (64.9%) has p value &lt; univariate p.</p>
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p &lt; 5e-8/27), 3366/5077 (66.3%) has p value &lt; univariate p. 3674/5077 with PCO p &gt; 0 (some p = 0 due to precision issue).
+<div class="figure" style="text-align: center">
+<img src="assets/minp_comp.png" alt="Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)"  />
+<p class="caption">
+Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)
+</p>
+</div>
 </div>
 <div id="heritability-of-protein" class="section level3">
 <h3>Heritability of protein</h3>
@@ -688,6 +763,43 @@ For 4782 protein/protein complex, there are 3816 with h2 &gt; 0. Mean h2 = 0.14,
 <p class="caption">
 Protein heritability (03_h2.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-h2_dist">
+Past versions of h2_dist.png
+</button>
+</p>
+<div id="fig-h2_dist" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/24d3d2b38d6c69e7484290ba3fed2afed0e79c32/docs/assets/h2_dist.png" target="_blank">24d3d2b</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <br>
 <p>
