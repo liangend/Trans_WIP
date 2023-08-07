@@ -27,7 +27,7 @@ Summary stats of AGES cohort from Gudjonsson et al. (2022; Nat Commun). 5368 ind
 knitr::include_graphics(c("assets/prot_mod_div.png"), error = FALSE)
 ```
 
-A total of 83,218 significant (p < 5e-8/27) SNP-module pairs were found in 679 loci (200 kb window around the leading signal). Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
+A total of 84,291 significant (p < 5e-8/27) SNP-module pairs were found in 657 loci (200 kb window around the leading signal) with 39,898 unique SNPs. Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
 ```{r echo=F, fig.align='center', fig.cap="Protein trans signal distribution (01_signal_summ.R)"}
 knitr::include_graphics(c("assets/prot_signal_dist.png"), error = FALSE)
 ```
@@ -40,20 +40,29 @@ knitr::include_graphics(c("assets/mod_size_cor.png"), error = FALSE)
 ```
 
 ### Comparing with univariate analysis
-Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes. Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.
+Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes and 57729 unique SNPs.
 
-For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p < 5e-8/27), 3366/5077 (66.3%) has p value < univariate p. 3674/5077 with PCO p > 0 (some p = 0 due to precision issue).
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, 1029 unique loci were found across all genes including 5077 loci-gene pairs. For each loci-gene pair, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 (83.5%) were also significant in PCO (p < 5e-8/27), 3366/5077 (66.3%) has p value < univariate p. 3674/5077 with PCO p > 0 (some p = 0 due to precision issue).
 ```{r echo=F, fig.align='center', fig.cap="Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)"}
 knitr::include_graphics(c("assets/minp_comp.png"), error = FALSE)
 ```
 
-### Heritability of protein
-For 4782 protein/protein complex, there are 3816 with h2 > 0. Mean h2 = 0.14, median = 0.12, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
-```{r echo=F, fig.align='center', fig.cap="Protein heritability (03_h2.R)"}
-knitr::include_graphics(c("assets/h2_dist.png"), error = FALSE)
+For each protein module in PCO analysis, a similar signal clustering was done to obtain 657 loci including 1595 loci-module pairs.
+
+```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO P values (04_mahattan.R)"}
+knitr::include_graphics(c("assets/manha_comp.png"), error = FALSE)
 ```
 
 
+### Heritability of protein
+For 4782 protein/protein complex, there are 3816 with h2 > 0. Across all proteins, mean h2 = 0.098, median = 0.095, 25% quantile = 0.016, 75% quantile = 0.17, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
+```{r echo=F, fig.align='center', fig.cap="Protein heritability (03_h2.R)"}
+knitr::include_graphics(c("assets/h2_dist.png"), error = FALSE)
+```
+I tried two sets of annotations to estimate h2: 53 baseline annotations (Finucane et al., 2018) and 97 baseline annotations (Hujoel et al., 2019). They agree relatively well with each other (cor = 0.59).
+```{r echo=F, fig.align='center', fig.cap="Cor of h2 between two annotations (03_h2.R)"}
+knitr::include_graphics(c("assets/h2_cor_annot.png"), error = FALSE)
+```
 
 
 
