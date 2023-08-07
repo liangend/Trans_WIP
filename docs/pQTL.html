@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-08-01
+<strong>Last updated:</strong> 2023-08-07
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecf2f5bae84a3b0a809f5fe23b35e82d2c500c30ctargetblankcf2f5baa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/cf2f5bae84a3b0a809f5fe23b35e82d2c500c30c" target="_blank">cf2f5ba</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree93d1dc418d1d8bb866e9f66709a75d2bec509b01targetblank93d1dc4a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/93d1dc418d1d8bb866e9f66709a75d2bec509b01" target="_blank">93d1dc4</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecf2f5bae84a3b0a809f5fe23b35e82d2c500c30ctargetblankcf2f5baa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree93d1dc418d1d8bb866e9f66709a75d2bec509b01targetblank93d1dc4a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/cf2f5bae84a3b0a809f5fe23b35e82d2c500c30c" target="_blank">cf2f5ba</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/93d1dc418d1d8bb866e9f66709a75d2bec509b01" target="_blank">93d1dc4</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/b71b01774dfad7898d5f32e04b736b3591b70b15/analysis/pQTL.Rmd" target="_blank">b71b017</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-07
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/2c91aa57aecb875f3a4ef08473acebfca11aefe2/docs/pQTL.html" target="_blank">2c91aa5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -655,7 +689,7 @@ liangend
 </table>
 </div>
 </div>
-A total of 83,218 significant (p &lt; 5e-8/27) SNP-module pairs were found in 679 loci (200 kb window around the leading signal). Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
+A total of 84,291 significant (p &lt; 5e-8/27) SNP-module pairs were found in 657 loci (200 kb window around the leading signal) with 39,898 unique SNPs. Most signals were found from module 26, which has molecular functions of signaling receptor binding, peptidase regulator activity, transmembrane receptor protein kinase activity; and involves in biological process of response to stimulus, positive regulation of protein kinase C activity, L-ascorbic acid biosynthetic process. Followed by module 27, which has MF of growth factor binding, signaling receptor binding, cell adhesion molecule binding and BP of anatomical structure development, glycoprotein metabolic process, regulation of protein maturation.
 <div class="figure" style="text-align: center">
 <img src="assets/prot_signal_dist.png" alt="Protein trans signal distribution (01_signal_summ.R)"  />
 <p class="caption">
@@ -746,18 +780,99 @@ liangend
 </div>
 <div id="comparing-with-univariate-analysis" class="section level3">
 <h3>Comparing with univariate analysis</h3>
-<p>Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p &lt; 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes. Among 83,218 signals found by PCO, 61,422 of them (73.8%) were also significant in the univariate analysis.</p>
-For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, a total of 5077 loci were found. For each loci, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 loci (83.5%) were also significant in PCO (p &lt; 5e-8/27), 3366/5077 (66.3%) has p value &lt; univariate p. 3674/5077 with PCO p &gt; 0 (some p = 0 due to precision issue).
+<p>Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p &lt; 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes and 57729 unique SNPs.</p>
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, 1029 unique loci were found across all genes including 5077 loci-gene pairs. For each loci-gene pair, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 (83.5%) were also significant in PCO (p &lt; 5e-8/27), 3366/5077 (66.3%) has p value &lt; univariate p. 3674/5077 with PCO p &gt; 0 (some p = 0 due to precision issue).
 <div class="figure" style="text-align: center">
 <img src="assets/minp_comp.png" alt="Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)"  />
 <p class="caption">
 Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-minp_comp">
+Past versions of minp_comp.png
+</button>
+</p>
+<div id="fig-minp_comp" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/6d757dcc70d62eecc4c1455f7c77eff37f5a3612/docs/assets/minp_comp.png" target="_blank">6d757dc</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>For each protein module in PCO analysis, a similar signal clustering was done to obtain 657 loci including 1595 loci-module pairs.</p>
+<div class="figure" style="text-align: center">
+<img src="assets/manha_comp.png" alt="Comparison of univariate and PCO P values (04_mahattan.R)"  />
+<p class="caption">
+Comparison of univariate and PCO P values (04_mahattan.R)
+</p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-manha_comp">
+Past versions of manha_comp.png
+</button>
+</p>
+<div id="fig-manha_comp" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/93d1dc418d1d8bb866e9f66709a75d2bec509b01/docs/assets/manha_comp.png" target="_blank">93d1dc4</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-07
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="heritability-of-protein" class="section level3">
 <h3>Heritability of protein</h3>
-For 4782 protein/protein complex, there are 3816 with h2 &gt; 0. Mean h2 = 0.14, median = 0.12, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
+For 4782 protein/protein complex, there are 3816 with h2 &gt; 0. Across all proteins, mean h2 = 0.098, median = 0.095, 25% quantile = 0.016, 75% quantile = 0.17, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
 <div class="figure" style="text-align: center">
 <img src="assets/h2_dist.png" alt="Protein heritability (03_h2.R)"  />
 <p class="caption">
@@ -788,6 +903,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/liangend/Trans_WIP/blob/93d1dc418d1d8bb866e9f66709a75d2bec509b01/docs/assets/h2_dist.png" target="_blank">93d1dc4</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-07
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/liangend/Trans_WIP/blob/24d3d2b38d6c69e7484290ba3fed2afed0e79c32/docs/assets/h2_dist.png" target="_blank">24d3d2b</a>
 </td>
 <td>
@@ -795,6 +921,50 @@ liangend
 </td>
 <td>
 2023-08-02
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+I tried two sets of annotations to estimate h2: 53 baseline annotations (Finucane et al., 2018) and 97 baseline annotations (Hujoel et al., 2019). They agree relatively well with each other (cor = 0.59).
+<div class="figure" style="text-align: center">
+<img src="assets/h2_cor_annot.png" alt="Cor of h2 between two annotations (03_h2.R)"  />
+<p class="caption">
+Cor of h2 between two annotations (03_h2.R)
+</p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-h2_cor_annot">
+Past versions of h2_cor_annot.png
+</button>
+</p>
+<div id="fig-h2_cor_annot" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/93d1dc418d1d8bb866e9f66709a75d2bec509b01/docs/assets/h2_cor_annot.png" target="_blank">93d1dc4</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-08-07
 </td>
 </tr>
 </tbody>
