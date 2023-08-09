@@ -42,7 +42,15 @@ knitr::include_graphics(c("assets/mod_size_cor.png"), error = FALSE)
 ### Comparing with univariate analysis
 Using univariate analysis for the 4113 aptamers, there are in total 324,928 significant (p < 5e-8/4728) SNP-protein pairs. 172,608 of them are trans signals (on different chromosomes with the target gene) corresponding to 1403 trans-eGenes and 57729 unique SNPs.
 
-For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, 1029 unique loci were found across all genes including 5077 loci-gene pairs. For each loci-gene pair, I found the minimum p value from PCO corresponding to the module containing the target protein. 4239/5077 (83.5%) were also significant in PCO (p < 5e-8/27), 3366/5077 (66.3%) has p value < univariate p. 3674/5077 with PCO p > 0 (some p = 0 due to precision issue).
+For each protein target, I clustered univariate signals into 200 kb loci around the leading SNP. As a result, 1029 unique loci were found across all genes including 5077 loci-gene pairs. For each loci-gene pair, I found the minimum p value from PCO corresponding to the module containing the target protein. 4581 (90.2%) were replicated in PCO (p < 0.05/5077); 4239 (83.5%) were also significant in PCO (p < 5e-8/27), 3366/5077 (66.3%) has p value < univariate p. 3674/5077 with PCO p > 0 (some p = 0 due to precision issue).
+```{r echo=F, fig.align='center', fig.cap="Signals found by univariate and PCO methods (02_pco_univar_comp.R)"}
+knitr::include_graphics(c("assets/univar_pco_signal_comp.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Replication of univariate trans signals using PCO (02_pco_univar_comp.R)"}
+knitr::include_graphics(c("assets/univar_pco_comp.png"), error = FALSE)
+```
+
 ```{r echo=F, fig.align='center', fig.cap="Minimum p value comparison for 3674 loci (02_pco_univar_comp.R)"}
 knitr::include_graphics(c("assets/minp_comp.png"), error = FALSE)
 ```
@@ -53,6 +61,17 @@ For each protein module in PCO analysis, a similar signal clustering was done to
 knitr::include_graphics(c("assets/manha_comp.png"), error = FALSE)
 ```
 
+Then I investigated the number of significant proteins in each unique genome locus, and how this is related to PCO performance.
+```{r echo=F, fig.align='center', fig.cap="Number of significant proteins per locus in univariate analysis for PCO significant and non-significant loci (02_pco_univar_comp.R)"}
+knitr::include_graphics(c("assets/n_prot_per_loc.png"), error = FALSE)
+```
+Number of protein-loci pairs per locus for PCO significant loci: 
+
+Mean = 7.3; 25% percentile = 1; median = 2; 75% percentile = 4; max = 984 (# of unique proteins = 571; chr17:26588663-26788663)
+
+Number of significant proteins per locus for PCO non-significant loci: 
+
+Mean = 1.4; 25% percentile = 1; median = 1; 75% percentile = 1; max = 9
 
 ### Heritability of protein
 For 4782 protein/protein complex, there are 3816 with h2 > 0. Across all proteins, mean h2 = 0.098, median = 0.095, 25% quantile = 0.016, 75% quantile = 0.17, max = 0.81 (gene CTSB, a member of the C1 family of peptidases).
@@ -63,6 +82,8 @@ I tried two sets of annotations to estimate h2: 53 baseline annotations (Finucan
 ```{r echo=F, fig.align='center', fig.cap="Cor of h2 between two annotations (03_h2.R)"}
 knitr::include_graphics(c("assets/h2_cor_annot.png"), error = FALSE)
 ```
+
+Using method from Liu et al. (2017), mean h2 = 0.070, 91.9% of which were explained by trans effect (inter-chr), while 9.2% were explained by cis effect (intra-chr).
 
 
 
