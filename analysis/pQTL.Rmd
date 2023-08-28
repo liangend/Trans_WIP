@@ -20,6 +20,55 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 8/11/2023
+### pi1 value for significant PCO signals in each module
+When using qvalue package to estimate the proportion of null p values, if the number of input p values is too small, estimated pi0 is not available. The mean pi1 is 0.22 across all signals, and the median is 0.16.
+```{r echo=F, fig.align='center', fig.cap="pi1 values across each module (05_pi1.R)"}
+knitr::include_graphics(c("assets/pco_prot_pi1.png"), error = FALSE)
+```
+
+### Specificity of SOMAmer
+Two studies examined the specificity of SOMAmer.
+
+1. Emilsson et al. (2018): They confirmed the specificy of SOMAmer using two mass spectrometry techniques: data dependent analysis (DDA) and multiple reaction monitoring (MRM) for 773 aptamers (out of 4137 aptamers corresponding to human protein coding genes). DDA examined 734 and MRM examined 102. Among 63 aptamers examined by both methods, 2 of them disagree with each other.
+```{r echo=F, fig.align='center', fig.cap="Aptamer specificity assessed by mass spectrometry (06_aptamer_specificiy.R)"}
+knitr::include_graphics(c("assets/aptamer_spe_ms.png"), error = FALSE)
+```
+
+2. Sun et al. (2018): They tested 920 aptamers (2596 target-related-gene pairs) for detection of proteins with at least 40% sequence homology to the target protein. 126 (14%) SOMAmers showed comparable binding with a homologous protein, but nearly half (53) of these were binding to alternative forms of the same protein, which result in 73 problematic aptamers (75/4113 analyzed aptamers falls in these).
+```{r echo=F, fig.align='center', fig.cap="Aptamer specificity assessed by binding specificity (06_aptamer_specificiy.R)"}
+knitr::include_graphics(c("assets/aptamer_bind_spe.png"), error = FALSE)
+```
+
+### Loss-of-function intolerance of pQTL genes
+There are 3023 and 4427 protein coding genes included in this analysis for Sun et al. (2018) and Gudjonsson et al. (2022), respectively.
+```{r echo=F, fig.align='center', fig.cap="Proportion of different signal types (08_pqtl_pLI.R)"}
+knitr::include_graphics(c("assets/pqtl_prop.png"), error = FALSE)
+```
+
+Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
+```{r echo=F, fig.align='center', fig.cap="pLI of different signal types (08_pqtl_pLI.R)"}
+knitr::include_graphics(c("assets/pqtl_pLI.png"), error = FALSE)
+```
+
+### MAF of pQTL variants
+There are in total 1980 pQTLs (589 cis and 1980 trans) from Sun et al. (2018) and 4290 pQTLs (1624 cis and 2666 trans) from Gudjonsson et al. (2022). Cis pQTL leading variants have lower MAF and larger effect size than trans.
+```{r echo=F, fig.align='center', fig.cap="pQTL MAF and effect size (09_maf_beta.R)"}
+knitr::include_graphics(c("assets/qptl_maf_beta.png"), error = FALSE)
+```
+
+Trans pQTLs overlapping with cis have lower MAF than those don't.
+```{r echo=F, fig.align='center', fig.cap="Trans pQTL MAF (09_maf_beta.R)"}
+knitr::include_graphics(c("assets/trans_pqtl_maf.png"), error = FALSE)
+```
+
+### Chromatin states of pQTL variants
+By investigating the chromatin states of lead variants of pQTLs, two studies show different results. In Sun et al. (2018), cis-pQTLs are mostly enriched in ZNF genes & repeats, and trans-pQTLs are mostly enriched in weak enhancers; while in Gudjonsson et al. (2022), cis-pQTLs are mostly enriched in active enhacers, and trans-pQTLs are mostly enriched in H3K27ac possible enhancers and DNase. In both studies, cis are more enriched in transcribed regions than trans.
+```{r echo=F, fig.align='center', fig.cap="Chromatin states of pQTLs (10_chr_state.R)"}
+knitr::include_graphics(c("assets/pqtl_chr_state.png"), error = FALSE)
+```
+
+
 ## 7/24/2023
 ### Protein QTL analysis
 Summary stats of AGES cohort from Gudjonsson et al. (2022; Nat Commun). 5368 individuals, 7,506,463 SNPs, 4782 aptamers in total. 27 modules (Emilsson et al., 2018) consisting of 4113 aptamers (corresponding to 3487 protein/protein complex) were analyzed using trans-PCO. 
@@ -83,7 +132,15 @@ I tried two sets of annotations to estimate h2: 53 baseline annotations (Finucan
 knitr::include_graphics(c("assets/h2_cor_annot.png"), error = FALSE)
 ```
 
-Using method from Liu et al. (2017), mean h2 = 0.070, 91.9% of which were explained by trans effect (inter-chr), while 9.2% were explained by cis effect (intra-chr).
+I calculated the h2 for two datasets (Sun et al., 2018; Gudjonsson et al., 2022). Sun's data has 3023 protein coding genes, 3301 individuals. They found 1927 significant associations, 34% of which are trans. Gudjonsson's data has 4427 protein coding genes, 5368 individuals. They found 4035 significant associations, 65% of which are trans.
+
+For Sun et al., 2018: mean cis h2 = 0.016; mean trans h2 = 0.091; mean trans h2 prop = 0.86
+
+For Gudjonsson et al., 2018: mean cis h2 = 0.043; mean trans h2 = 0.42; mean trans h2 prop = 0.91
+
+```{r echo=F, fig.align='center', fig.cap="h2 summary for two datasets (07_h2_2_datasets.R)"}
+knitr::include_graphics(c("assets/h2_2_data.png"), error = FALSE)
+```
 
 
 
