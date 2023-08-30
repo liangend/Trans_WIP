@@ -35,7 +35,7 @@ Two studies examined the specificity of SOMAmer.
 knitr::include_graphics(c("assets/aptamer_spe_ms.png"), error = FALSE)
 ```
 
-2. Sun et al. (2018): They tested 920 aptamers (2596 target-related-gene pairs) for detection of proteins with at least 40% sequence homology to the target protein. 126 (14%) SOMAmers showed comparable binding with a homologous protein, but nearly half (53) of these were binding to alternative forms of the same protein, which result in 73 problematic aptamers (75/4113 analyzed aptamers falls in these).
+2. Sun et al. (2018): They tested 920 aptamers (2596 target-related-gene pairs) for detection of proteins with at least 40% sequence homology to the target protein. 126 (14%) aptamers showed comparable binding with a homologous protein, but nearly half (53) of these were binding to alternative forms of the same protein, which result in the rest 73 problematic aptamers (72 of these were also included in Gudjosson et al. (2022)).
 ```{r echo=F, fig.align='center', fig.cap="Aptamer specificity assessed by binding specificity (06_aptamer_specificiy.R)"}
 knitr::include_graphics(c("assets/aptamer_bind_spe.png"), error = FALSE)
 ```
@@ -66,6 +66,12 @@ knitr::include_graphics(c("assets/trans_pqtl_maf.png"), error = FALSE)
 By investigating the chromatin states of lead variants of pQTLs, two studies show different results. In Sun et al. (2018), cis-pQTLs are mostly enriched in ZNF genes & repeats, and trans-pQTLs are mostly enriched in weak enhancers; while in Gudjonsson et al. (2022), cis-pQTLs are mostly enriched in active enhacers, and trans-pQTLs are mostly enriched in H3K27ac possible enhancers and DNase. In both studies, cis are more enriched in transcribed regions than trans.
 ```{r echo=F, fig.align='center', fig.cap="Chromatin states of pQTLs (10_chr_state.R)"}
 knitr::include_graphics(c("assets/pqtl_chr_state.png"), error = FALSE)
+```
+
+### Colocalization with GWAS signals
+Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-pQTLs are more likely to be colocalize with GWAS signals (PP4 > 0.5).
+```{r echo=F, fig.align='center', fig.cap="Colocalization summary (11_coloc.R)"}
+knitr::include_graphics(c("assets/pqtl_coloc.png"), error = FALSE)
 ```
 
 
