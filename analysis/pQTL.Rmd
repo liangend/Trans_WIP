@@ -20,6 +20,13 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 9/6/2023
+### Enhancer domain score (EDS) of pQTL genes
+No EDS differences were found between cis-pQTL and trans-pQTL genes
+```{r echo=F, fig.align='center', fig.cap="EDS of different signal types (09_EDS/eds_ana.R)"}
+knitr::include_graphics(c("assets/pqtl_eds.png"), error = FALSE)
+```
+
 ## 8/11/2023
 ### pi1 value for significant PCO signals in each module
 When using qvalue package to estimate the proportion of null p values, if the number of input p values is too small, estimated pi0 is not available. The mean pi1 is 0.22 across all signals, and the median is 0.16.
@@ -140,6 +147,8 @@ knitr::include_graphics(c("assets/h2_cor_annot.png"), error = FALSE)
 
 I calculated the h2 for two datasets (Sun et al., 2018; Gudjonsson et al., 2022). Sun's data has 3023 protein coding genes, 3301 individuals. They found 1927 significant associations, 34% of which are trans. Gudjonsson's data has 4427 protein coding genes, 5368 individuals. They found 4035 significant associations, 65% of which are trans.
 
+Define cis as SNPs within the same chromosome as the gene and trans as SNPs in different chromosomes:
+
 For Sun et al., 2018: mean cis h2 = 0.016; mean trans h2 = 0.091; mean trans h2 prop = 0.86
 
 For Gudjonsson et al., 2018: mean cis h2 = 0.043; mean trans h2 = 0.42; mean trans h2 prop = 0.91
@@ -148,5 +157,13 @@ For Gudjonsson et al., 2018: mean cis h2 = 0.043; mean trans h2 = 0.42; mean tra
 knitr::include_graphics(c("assets/h2_2_data.png"), error = FALSE)
 ```
 
+Define cis as SNPs within 1 Mb of the gene tss and trans as SNPs outside 5 Mb of the gene tss and in different chromosomes:
 
+For Sun et al., 2018: mean cis h2 = 0.011; mean trans h2 = 0.096; mean trans h2 prop = 0.90
+
+For Gudjonsson et al., 2018: mean cis h2 = 0.017; mean trans h2 = 0.45; mean trans h2 prop = 0.96
+
+```{r echo=F, fig.align='center', fig.cap="h2 summary for two datasets (07_h2_2_datasets.R)"}
+knitr::include_graphics(c("assets/h2_2_data_1mb_5mb.png"), error = FALSE)
+```
 
