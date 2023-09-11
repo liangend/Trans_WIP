@@ -20,6 +20,17 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 9/13/2023
+### Enhancer length of pQTL genes
+Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. Gene length is positively correlated with pLI (cor = 0.16), while enhancer length is not correlated with enhancer length or pLI.
+```{r echo=F, fig.align='center', fig.cap="Enhancer length for pQTL genes (12_enh_length.R)"}
+knitr::include_graphics(c("assets/enh_length.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Enhancer length, gene length and pLI for genes with at least one enhancer annotation (12_enh_length.R)"}
+knitr::include_graphics(c("assets/pLI_enh_gene_len.png"), error = FALSE)
+```
+
 ## 9/6/2023
 ### Enhancer domain score (EDS) of pQTL genes
 No EDS differences were found between cis-pQTL and trans-pQTL genes
@@ -48,10 +59,7 @@ knitr::include_graphics(c("assets/aptamer_bind_spe.png"), error = FALSE)
 ```
 
 ### Loss-of-function intolerance of pQTL genes
-There are 3023 and 4427 protein coding genes included in this analysis for Sun et al. (2018) and Gudjonsson et al. (2022), respectively.
-```{r echo=F, fig.align='center', fig.cap="Proportion of different signal types (08_pqtl_pLI.R)"}
-knitr::include_graphics(c("assets/pqtl_prop.png"), error = FALSE)
-```
+There are 3023, 4427, 1403 protein coding genes included in this analysis for Sun et al. (2018), Gudjonsson et al. (2022), and UKB (2022) respectively.
 
 Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
 ```{r echo=F, fig.align='center', fig.cap="pLI of different signal types (08_pqtl_pLI.R)"}
@@ -70,9 +78,13 @@ knitr::include_graphics(c("assets/trans_pqtl_maf.png"), error = FALSE)
 ```
 
 ### Chromatin states of pQTL variants
-By investigating the chromatin states of lead variants of pQTLs, two studies show different results. In Sun et al. (2018), cis-pQTLs are mostly enriched in ZNF genes & repeats, and trans-pQTLs are mostly enriched in weak enhancers; while in Gudjonsson et al. (2022), cis-pQTLs are mostly enriched in active enhacers, and trans-pQTLs are mostly enriched in H3K27ac possible enhancers and DNase. In both studies, cis are more enriched in transcribed regions than trans.
-```{r echo=F, fig.align='center', fig.cap="Chromatin states of pQTLs (10_chr_state.R)"}
-knitr::include_graphics(c("assets/pqtl_chr_state.png"), error = FALSE)
+By investigating the chromatin states of lead variants of pQTLs, two studies show different results in blood but consistent results in liver. In both studies, trans-pQTLs are most enriched in ZNF genes & repeats.
+```{r echo=F, fig.align='center', fig.cap="Blood chromatin states of pQTLs (10_chr_state.R)"}
+knitr::include_graphics(c("assets/pqtl_chr_state_blood.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="Liver chromatin states of pQTLs (10_chr_state.R)"}
+knitr::include_graphics(c("assets/pqtl_chr_state_liver.png"), error = FALSE)
 ```
 
 ### Colocalization with GWAS signals
