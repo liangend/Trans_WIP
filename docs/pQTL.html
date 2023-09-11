@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-09-06
+<strong>Last updated:</strong> 2023-09-11
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree87f03f8f7d4e9c76688f3f2990576d50f58042aftargetblank87f03f8a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/87f03f8f7d4e9c76688f3f2990576d50f58042af" target="_blank">87f03f8</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecbcb50dcb976e363e3970ec15ea09e68d4903a17targetblankcbcb50da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/cbcb50dcb976e363e3970ec15ea09e68d4903a17" target="_blank">cbcb50d</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree87f03f8f7d4e9c76688f3f2990576d50f58042aftargetblank87f03f8a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreecbcb50dcb976e363e3970ec15ea09e68d4903a17targetblankcbcb50da" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/87f03f8f7d4e9c76688f3f2990576d50f58042af" target="_blank">87f03f8</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/cbcb50dcb976e363e3970ec15ea09e68d4903a17" target="_blank">cbcb50d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/cbcb50dcb976e363e3970ec15ea09e68d4903a17/analysis/pQTL.Rmd" target="_blank">cbcb50d</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-11
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/812ad3ab5db228ba28b93bfd5ad650224acd66ed/docs/pQTL.html" target="_blank">812ad3a</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-06
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -778,6 +812,25 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>9/13/2023</h2>
+<div id="enhancer-length-of-pqtl-genes" class="section level3">
+<h3>Enhancer length of pQTL genes</h3>
+Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. Gene length is positively correlated with pLI (cor = 0.16), while enhancer length is not correlated with enhancer length or pLI.
+<div class="figure" style="text-align: center">
+<img src="assets/enh_length.png" alt="Enhancer length for pQTL genes (12_enh_length.R)"  />
+<p class="caption">
+Enhancer length for pQTL genes (12_enh_length.R)
+</p>
+</div>
+<div class="figure" style="text-align: center">
+<img src="assets/pLI_enh_gene_len.png" alt="Enhancer length, gene length and pLI for genes with at least one enhancer annotation (12_enh_length.R)"  />
+<p class="caption">
+Enhancer length, gene length and pLI for genes with at least one enhancer annotation (12_enh_length.R)
+</p>
+</div>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>9/6/2023</h2>
 <div id="enhancer-domain-score-eds-of-pqtl-genes" class="section level3">
 <h3>Enhancer domain score (EDS) of pQTL genes</h3>
@@ -788,9 +841,46 @@ No EDS differences were found between cis-pQTL and trans-pQTL genes
 EDS of different signal types (09_EDS/eds_ana.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_eds">
+Past versions of pqtl_eds.png
+</button>
+</p>
+<div id="fig-pqtl_eds" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/c8cdef503a41584e081ab934af87b44ed87c8374/docs/assets/pqtl_eds.png" target="_blank">c8cdef5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-06
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div id="section-1" class="section level2">
+</div>
+</div>
+<div id="section-2" class="section level2">
 <h2>8/11/2023</h2>
 <div id="pi1-value-for-significant-pco-signals-in-each-module" class="section level3">
 <h3>pi1 value for significant PCO signals in each module</h3>
@@ -937,50 +1027,7 @@ liangend
 </div>
 <div id="loss-of-function-intolerance-of-pqtl-genes" class="section level3">
 <h3>Loss-of-function intolerance of pQTL genes</h3>
-There are 3023 and 4427 protein coding genes included in this analysis for Sun et al. (2018) and Gudjonsson et al. (2022), respectively.
-<div class="figure" style="text-align: center">
-<img src="assets/pqtl_prop.png" alt="Proportion of different signal types (08_pqtl_pLI.R)"  />
-<p class="caption">
-Proportion of different signal types (08_pqtl_pLI.R)
-</p>
-</div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_prop">
-Past versions of pqtl_prop.png
-</button>
-</p>
-<div id="fig-pqtl_prop" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/liangend/Trans_WIP/blob/69161abcb642bed9ff9dd91ea81f5a8ffc62dfb2/docs/assets/pqtl_prop.png" target="_blank">69161ab</a>
-</td>
-<td>
-liangend
-</td>
-<td>
-2023-08-28
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<p>There are 3023, 4427, 1403 protein coding genes included in this analysis for Sun et al. (2018), Gudjonsson et al. (2022), and UKB (2022) respectively.</p>
 Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
 <div class="figure" style="text-align: center">
 <img src="assets/pqtl_pLI.png" alt="pLI of different signal types (08_pqtl_pLI.R)"  />
@@ -1119,49 +1166,18 @@ liangend
 </div>
 <div id="chromatin-states-of-pqtl-variants" class="section level3">
 <h3>Chromatin states of pQTL variants</h3>
-By investigating the chromatin states of lead variants of pQTLs, two studies show different results. In Sun et al. (2018), cis-pQTLs are mostly enriched in ZNF genes &amp; repeats, and trans-pQTLs are mostly enriched in weak enhancers; while in Gudjonsson et al. (2022), cis-pQTLs are mostly enriched in active enhacers, and trans-pQTLs are mostly enriched in H3K27ac possible enhancers and DNase. In both studies, cis are more enriched in transcribed regions than trans.
+By investigating the chromatin states of lead variants of pQTLs, two studies show different results in blood but consistent results in liver. In both studies, trans-pQTLs are most enriched in ZNF genes &amp; repeats.
 <div class="figure" style="text-align: center">
-<img src="assets/pqtl_chr_state.png" alt="Chromatin states of pQTLs (10_chr_state.R)"  />
+<img src="assets/pqtl_chr_state_blood.png" alt="Blood chromatin states of pQTLs (10_chr_state.R)"  />
 <p class="caption">
-Chromatin states of pQTLs (10_chr_state.R)
+Blood chromatin states of pQTLs (10_chr_state.R)
 </p>
 </div>
-<p>
-<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_chr_state">
-Past versions of pqtl_chr_state.png
-</button>
+<div class="figure" style="text-align: center">
+<img src="assets/pqtl_chr_state_liver.png" alt="Liver chromatin states of pQTLs (10_chr_state.R)"  />
+<p class="caption">
+Liver chromatin states of pQTLs (10_chr_state.R)
 </p>
-<div id="fig-pqtl_chr_state" class="collapse">
-<div class="table-responsive">
-<table class="table table-condensed table-hover">
-<thead>
-<tr>
-<th>
-Version
-</th>
-<th>
-Author
-</th>
-<th>
-Date
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a href="https://github.com/liangend/Trans_WIP/blob/69161abcb642bed9ff9dd91ea81f5a8ffc62dfb2/docs/assets/pqtl_chr_state.png" target="_blank">69161ab</a>
-</td>
-<td>
-liangend
-</td>
-<td>
-2023-08-28
-</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 <div id="colocalization-with-gwas-signals" class="section level3">
@@ -1197,6 +1213,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/liangend/Trans_WIP/blob/c8cdef503a41584e081ab934af87b44ed87c8374/docs/assets/pqtl_coloc.png" target="_blank">c8cdef5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-06
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/liangend/Trans_WIP/blob/6d243864495892eb8e5c9f341d76d7911e19b833/docs/assets/pqtl_coloc.png" target="_blank">6d24386</a>
 </td>
 <td>
@@ -1212,7 +1239,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>7/24/2023</h2>
 <div id="protein-qtl-analysis" class="section level3">
 <h3>Protein QTL analysis</h3>
@@ -1731,6 +1758,43 @@ liangend
 <p class="caption">
 h2 summary for two datasets (07_h2_2_datasets.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-h2_2_data_1mb_5mb">
+Past versions of h2_2_data_1mb_5mb.png
+</button>
+</p>
+<div id="fig-h2_2_data_1mb_5mb" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/c8cdef503a41584e081ab934af87b44ed87c8374/docs/assets/h2_2_data_1mb_5mb.png" target="_blank">c8cdef5</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-06
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <br>
 <p>
