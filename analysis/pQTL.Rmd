@@ -31,6 +31,12 @@ knitr::include_graphics(c("assets/enh_length.png"), error = FALSE)
 knitr::include_graphics(c("assets/pLI_enh_gene_len.png"), error = FALSE)
 ```
 
+### Effect size of most significant cis and trans signals
+Unlike eQTL, the most extreme cis and trans effects (smallest p value) in protein are not significantly different.
+```{r echo=F, fig.align='center', fig.cap="Extreme cis and trans effect size for each protein (13_most_sig_cis_trans.R)"}
+knitr::include_graphics(c("assets/most_sig_beta.png"), error = FALSE)
+```
+
 ## 9/6/2023
 ### Enhancer domain score (EDS) of pQTL genes
 No EDS differences were found between cis-pQTL and trans-pQTL genes
