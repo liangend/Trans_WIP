@@ -22,11 +22,15 @@ blockquote {
 ```
 ## 9/13/2023
 ### Enhancer length of pQTL genes
-Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. Gene length is positively correlated with pLI (cor = 0.16), while enhancer length is not correlated with enhancer length or pLI.
+I first use enhancer annotation in liver. Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. 
 ```{r echo=F, fig.align='center', fig.cap="Enhancer length for pQTL genes (12_enh_length.R)"}
 knitr::include_graphics(c("assets/enh_length.png"), error = FALSE)
 ```
-
+When using the average enhancer length across all tissues and the number of active tissues (containing at least one enhancer) as the covariates to do logistic regression (Mostafavi et al., 2022), enhancer length does not have a significant effect on the gene having a cis signal or not.
+```{r echo=F, fig.align='center', fig.cap="Enhancer length for pQTL genes (12_enh_length.R)"}
+knitr::include_graphics(c("assets/enh_len_logit_reg.png"), error = FALSE)
+```
+Gene length is positively correlated with pLI (cor = 0.16); average enhancer length is also positively correlated with pLI (0.15) and gene length (0.08).
 ```{r echo=F, fig.align='center', fig.cap="Enhancer length, gene length and pLI for genes with at least one enhancer annotation (12_enh_length.R)"}
 knitr::include_graphics(c("assets/pLI_enh_gene_len.png"), error = FALSE)
 ```
@@ -179,9 +183,11 @@ Define cis as SNPs within 1 Mb of the gene tss and trans as SNPs outside 5 Mb of
 
 For Sun et al., 2018: mean cis h2 = 0.011; mean trans h2 = 0.096; mean trans h2 prop = 0.90
 
-For Gudjonsson et al., 2018: mean cis h2 = 0.017; mean trans h2 = 0.45; mean trans h2 prop = 0.96
+For Gudjonsson et al., 2022: mean cis h2 = 0.017; mean trans h2 = 0.45; mean trans h2 prop = 0.96
 
-```{r echo=F, fig.align='center', fig.cap="h2 summary for two datasets (07_h2_2_datasets.R)"}
+For UKBiobank, 2022: mean cis h2 = 0.012; mean trans h2 = 0.091; mean trans h2 prop = 0.89
+
+```{r echo=F, fig.align='center', fig.cap="h2 summary for 3 datasets (07_h2_3_datasets.R)"}
 knitr::include_graphics(c("assets/h2_2_data_1mb_5mb.png"), error = FALSE)
 ```
 
