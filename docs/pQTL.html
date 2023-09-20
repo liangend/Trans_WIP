@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-09-13
+<strong>Last updated:</strong> 2023-09-20
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb33b23f2f85aa3fb40c9ac003763a633a85010c7targetblankb33b23fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/b33b23f2f85aa3fb40c9ac003763a633a85010c7" target="_blank">b33b23f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree43f7fd8c55c3afc06446dd8bcfeb0368d790fb70targetblank43f7fd8a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/43f7fd8c55c3afc06446dd8bcfeb0368d790fb70" target="_blank">43f7fd8</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb33b23f2f85aa3fb40c9ac003763a633a85010c7targetblankb33b23fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree43f7fd8c55c3afc06446dd8bcfeb0368d790fb70targetblank43f7fd8a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/b33b23f2f85aa3fb40c9ac003763a633a85010c7" target="_blank">b33b23f</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/43f7fd8c55c3afc06446dd8bcfeb0368d790fb70" target="_blank">43f7fd8</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/43f7fd8c55c3afc06446dd8bcfeb0368d790fb70/analysis/pQTL.Rmd" target="_blank">43f7fd8</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-20
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/840df451f1c131f88a1734b1666a521c98704797/docs/pQTL.html" target="_blank">840df45</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-13
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -883,7 +917,7 @@ blockquote {
 <h2>9/13/2023</h2>
 <div id="enhancer-length-of-pqtl-genes" class="section level3">
 <h3>Enhancer length of pQTL genes</h3>
-Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. Gene length is positively correlated with pLI (cor = 0.16), while enhancer length is not correlated with enhancer length or pLI.
+I first use enhancer annotation in liver. Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples.
 <div class="figure" style="text-align: center">
 <img src="assets/enh_length.png" alt="Enhancer length for pQTL genes (12_enh_length.R)"  />
 <p class="caption">
@@ -927,6 +961,14 @@ liangend
 </table>
 </div>
 </div>
+When using the average enhancer length across all tissues and the number of active tissues (containing at least one enhancer) as the covariates to do logistic regression (Mostafavi et al., 2022), enhancer length does not have a significant effect on the gene having a cis signal or not.
+<div class="figure" style="text-align: center">
+<img src="assets/enh_len_logit_reg.png" alt="Enhancer length for pQTL genes (12_enh_length.R)"  />
+<p class="caption">
+Enhancer length for pQTL genes (12_enh_length.R)
+</p>
+</div>
+Gene length is positively correlated with pLI (cor = 0.16); average enhancer length is also positively correlated with pLI (0.15) and gene length (0.08).
 <div class="figure" style="text-align: center">
 <img src="assets/pLI_enh_gene_len.png" alt="Enhancer length, gene length and pLI for genes with at least one enhancer annotation (12_enh_length.R)"  />
 <p class="caption">
@@ -979,6 +1021,43 @@ Unlike eQTL, the most extreme cis and trans effects (smallest p value) in protei
 <p class="caption">
 Extreme cis and trans effect size for each protein (13_most_sig_cis_trans.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-most_sig_beta">
+Past versions of most_sig_beta.png
+</button>
+</p>
+<div id="fig-most_sig_beta" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/d13cd602e6dca369266fc7a1503f943bc0b754ff/docs/assets/most_sig_beta.png" target="_blank">d13cd60</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-13
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -2396,11 +2475,12 @@ liangend
 </div>
 <p>Define cis as SNPs within 1 Mb of the gene tss and trans as SNPs outside 5 Mb of the gene tss and in different chromosomes:</p>
 <p>For Sun et al., 2018: mean cis h2 = 0.011; mean trans h2 = 0.096; mean trans h2 prop = 0.90</p>
-<p>For Gudjonsson et al., 2018: mean cis h2 = 0.017; mean trans h2 = 0.45; mean trans h2 prop = 0.96</p>
+<p>For Gudjonsson et al., 2022: mean cis h2 = 0.017; mean trans h2 = 0.45; mean trans h2 prop = 0.96</p>
+<p>For UKBiobank, 2022: mean cis h2 = 0.012; mean trans h2 = 0.091; mean trans h2 prop = 0.89</p>
 <div class="figure" style="text-align: center">
-<img src="assets/h2_2_data_1mb_5mb.png" alt="h2 summary for two datasets (07_h2_2_datasets.R)"  />
+<img src="assets/h2_2_data_1mb_5mb.png" alt="h2 summary for 3 datasets (07_h2_3_datasets.R)"  />
 <p class="caption">
-h2 summary for two datasets (07_h2_2_datasets.R)
+h2 summary for 3 datasets (07_h2_3_datasets.R)
 </p>
 </div>
 <p>
