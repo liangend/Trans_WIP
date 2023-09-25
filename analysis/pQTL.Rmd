@@ -20,6 +20,17 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 9/25/2023
+### Trans-signal of protein complex using PCO
+UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets. 
+
+I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 2074 protein complexes in CORUM database, including 9015 proteins (2799 unique ones). 372 protein complexes overlap with > 1 protein in UKB data, including 899 proteins (341 unique ones). The number of proteins in these complexes varies from 2 to 10 (mean: 2.4; median: 2). 
+
+There are 516,665 significant module-SNP pairs (p < 5e-8/372). By grouping them into 200 kb loci around leading SNPs, there are 7193 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
+```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"}
+knitr::include_graphics(c("assets/ukb_pco_univar_comp.png"), error = FALSE)
+```
+
 ## 9/13/2023
 ### Enhancer length of pQTL genes
 I first use enhancer annotation in liver. Genes with cis signals have longer enhancer regions then those without cis signals. Error bars were generated based on bootstrapping for 1000 samples. 
