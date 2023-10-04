@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-09-25
+<strong>Last updated:</strong> 2023-10-04
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree3bd52e2d9edeb39af35c8687452037928d61f34ctargetblank3bd52e2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/3bd52e2d9edeb39af35c8687452037928d61f34c" target="_blank">3bd52e2</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb52eb7174c5778e22d71a02ea0940b090a05d784targetblankb52eb71a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/b52eb7174c5778e22d71a02ea0940b090a05d784" target="_blank">b52eb71</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree3bd52e2d9edeb39af35c8687452037928d61f34ctargetblank3bd52e2a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb52eb7174c5778e22d71a02ea0940b090a05d784targetblankb52eb71a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/3bd52e2d9edeb39af35c8687452037928d61f34c" target="_blank">3bd52e2</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/b52eb7174c5778e22d71a02ea0940b090a05d784" target="_blank">b52eb71</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/b52eb7174c5778e22d71a02ea0940b090a05d784/analysis/pQTL.Rmd" target="_blank">b52eb71</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/e932fa20e60c206f0db690121946228631e8c6ac/docs/pQTL.html" target="_blank">e932fa2</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-25
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -952,12 +986,66 @@ blockquote {
 <div id="trans-signal-of-protein-complex-using-pco" class="section level3">
 <h3>Trans-signal of protein complex using PCO</h3>
 <p>UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets.</p>
-<p>I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 2074 protein complexes in CORUM database, including 9015 proteins (2799 unique ones). 372 protein complexes overlap with &gt; 1 protein in UKB data, including 899 proteins (341 unique ones). The number of proteins in these complexes varies from 2 to 10 (mean: 2.4; median: 2).</p>
-There are 516,665 significant module-SNP pairs (p &lt; 5e-8/372). By grouping them into 200 kb loci around leading SNPs, there are 7193 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
+<p>I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with &gt; 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2).</p>
+There are 966,157 significant module-SNP pairs (p &lt; 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
 <div class="figure" style="text-align: center">
 <img src="assets/ukb_pco_univar_comp.png" alt="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"  />
 <p class="caption">
 Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)
+</p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-ukb_pco_univar_comp">
+Past versions of ukb_pco_univar_comp.png
+</button>
+</p>
+<div id="fig-ukb_pco_univar_comp" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/82e09051cfc063620d106fb0d76065d70729e883/docs/assets/ukb_pco_univar_comp.png" target="_blank">82e0905</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-25
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+Among 12155 trans-pQTLs, 1465 of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 of them are within 1 Mb.
+<div class="figure" style="text-align: center">
+<img src="assets/pqtl_gene_dist.png" alt="Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)"  />
+<p class="caption">
+Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)
+</p>
+</div>
+</div>
+<div id="colocalization-with-gwas-signals" class="section level3">
+<h3>Colocalization with GWAS signals</h3>
+Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-PCO signals are more likely to colocalize with GWAS signals (PP4 &gt; 0.5).
+<div class="figure" style="text-align: center">
+<img src="assets/pco_pqtl_coloc.png" alt="Colocalization summary (11_coloc.R)"  />
+<p class="caption">
+Colocalization summary (11_coloc.R)
 </p>
 </div>
 </div>
@@ -1050,6 +1138,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/82e09051cfc063620d106fb0d76065d70729e883/docs/assets/enh_len_logit_reg.png" target="_blank">82e0905</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-25
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/liangend/Trans_WIP/blob/64e1232c3edd1b5950e00ba3b12165653946b870/docs/assets/enh_len_logit_reg.png" target="_blank">64e1232</a>
@@ -1152,6 +1251,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/82e09051cfc063620d106fb0d76065d70729e883/docs/assets/most_sig_beta.png" target="_blank">82e0905</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-09-25
+</td>
+</tr>
 <tr>
 <td>
 <a href="https://github.com/liangend/Trans_WIP/blob/d13cd602e6dca369266fc7a1503f943bc0b754ff/docs/assets/most_sig_beta.png" target="_blank">d13cd60</a>
@@ -1521,6 +1631,12 @@ liangend
 </table>
 </div>
 </div>
+<div class="figure" style="text-align: center">
+<img src="assets/pqtl_z_pLI.png" alt="pLI against |Z| quantiles (08_pqtl_pLI.R)"  />
+<p class="caption">
+pLI against |Z| quantiles (08_pqtl_pLI.R)
+</p>
+</div>
 </div>
 <div id="maf-of-pqtl-variants" class="section level3">
 <h3>MAF of pQTL variants</h3>
@@ -1747,7 +1863,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="colocalization-with-gwas-signals" class="section level3">
+<div id="colocalization-with-gwas-signals-1" class="section level3">
 <h3>Colocalization with GWAS signals</h3>
 Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-pQTLs are more likely to be colocalize with GWAS signals (PP4 &gt; 0.5).
 <div class="figure" style="text-align: center">
