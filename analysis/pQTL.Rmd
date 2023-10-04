@@ -26,7 +26,7 @@ UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 o
 
 I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with > 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2). 
 
-There are 966,157 significant module-SNP pairs (p < 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
+There are 966,157 significant module-SNP pairs (p < 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
 ```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"}
 knitr::include_graphics(c("assets/ukb_pco_univar_comp.png"), error = FALSE)
 ```
