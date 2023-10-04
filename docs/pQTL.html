@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb52eb7174c5778e22d71a02ea0940b090a05d784targetblankb52eb71a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/b52eb7174c5778e22d71a02ea0940b090a05d784" target="_blank">b52eb71</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree52bc0bb6317bfabb64058a71cf8c292a0a2b2f0dtargetblank52bc0bba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/52bc0bb6317bfabb64058a71cf8c292a0a2b2f0d" target="_blank">52bc0bb</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtreeb52eb7174c5778e22d71a02ea0940b090a05d784targetblankb52eb71a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree52bc0bb6317bfabb64058a71cf8c292a0a2b2f0dtargetblank52bc0bba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/b52eb7174c5778e22d71a02ea0940b090a05d784" target="_blank">b52eb71</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/52bc0bb6317bfabb64058a71cf8c292a0a2b2f0d" target="_blank">52bc0bb</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/52bc0bb6317bfabb64058a71cf8c292a0a2b2f0d/analysis/pQTL.Rmd" target="_blank">52bc0bb</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/7322d1f3024c2bce67d623c96fb5a94561f53610/docs/pQTL.html" target="_blank">7322d1f</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+<td>
+commit message
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -987,7 +1021,7 @@ blockquote {
 <h3>Trans-signal of protein complex using PCO</h3>
 <p>UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets.</p>
 <p>I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with &gt; 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2).</p>
-There are 966,157 significant module-SNP pairs (p &lt; 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
+There are 966,157 significant module-SNP pairs (p &lt; 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
 <div class="figure" style="text-align: center">
 <img src="assets/ukb_pco_univar_comp.png" alt="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"  />
 <p class="caption">
@@ -1038,6 +1072,43 @@ Among 12155 trans-pQTLs, 1465 of them are located on the same chromosome of one 
 Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_gene_dist">
+Past versions of pqtl_gene_dist.png
+</button>
+</p>
+<div id="fig-pqtl_gene_dist" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/7322d1f3024c2bce67d623c96fb5a94561f53610/docs/assets/pqtl_gene_dist.png" target="_blank">7322d1f</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="colocalization-with-gwas-signals" class="section level3">
 <h3>Colocalization with GWAS signals</h3>
@@ -1047,6 +1118,43 @@ Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans
 <p class="caption">
 Colocalization summary (11_coloc.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pco_pqtl_coloc">
+Past versions of pco_pqtl_coloc.png
+</button>
+</p>
+<div id="fig-pco_pqtl_coloc" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/7322d1f3024c2bce67d623c96fb5a94561f53610/docs/assets/pco_pqtl_coloc.png" target="_blank">7322d1f</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -1636,6 +1744,43 @@ liangend
 <p class="caption">
 pLI against |Z| quantiles (08_pqtl_pLI.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_z_pLI">
+Past versions of pqtl_z_pLI.png
+</button>
+</p>
+<div id="fig-pqtl_z_pLI" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/7322d1f3024c2bce67d623c96fb5a94561f53610/docs/assets/pqtl_z_pLI.png" target="_blank">7322d1f</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div id="maf-of-pqtl-variants" class="section level3">
