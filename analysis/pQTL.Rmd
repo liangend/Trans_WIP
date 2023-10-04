@@ -24,11 +24,22 @@ blockquote {
 ### Trans-signal of protein complex using PCO
 UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets. 
 
-I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 2074 protein complexes in CORUM database, including 9015 proteins (2799 unique ones). 372 protein complexes overlap with > 1 protein in UKB data, including 899 proteins (341 unique ones). The number of proteins in these complexes varies from 2 to 10 (mean: 2.4; median: 2). 
+I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with > 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2). 
 
-There are 516,665 significant module-SNP pairs (p < 5e-8/372). By grouping them into 200 kb loci around leading SNPs, there are 7193 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
+There are 966,157 significant module-SNP pairs (p < 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1170 loci only significant in PCO, 2886 loci with smaller p values in PCO.
 ```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"}
 knitr::include_graphics(c("assets/ukb_pco_univar_comp.png"), error = FALSE)
+```
+
+Among 12155 trans-pQTLs, 1465 of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 of them are within 1 Mb.
+```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)"}
+knitr::include_graphics(c("assets/pqtl_gene_dist.png"), error = FALSE)
+```
+
+### Colocalization with GWAS signals
+Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-PCO signals are more likely to colocalize with GWAS signals (PP4 > 0.5).
+```{r echo=F, fig.align='center', fig.cap="Colocalization summary (11_coloc.R)"}
+knitr::include_graphics(c("assets/pco_pqtl_coloc.png"), error = FALSE)
 ```
 
 ## 9/13/2023
@@ -85,6 +96,10 @@ There are 3023, 4427, 1403 protein coding genes included in this analysis for Su
 Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
 ```{r echo=F, fig.align='center', fig.cap="pLI of different signal types (08_pqtl_pLI.R)"}
 knitr::include_graphics(c("assets/pqtl_pLI.png"), error = FALSE)
+```
+
+```{r echo=F, fig.align='center', fig.cap="pLI against |Z| quantiles (08_pqtl_pLI.R)"}
+knitr::include_graphics(c("assets/pqtl_z_pLI.png"), error = FALSE)
 ```
 
 ### MAF of pQTL variants
