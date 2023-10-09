@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-10-04
+<strong>Last updated:</strong> 2023-10-09
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree52bc0bb6317bfabb64058a71cf8c292a0a2b2f0dtargetblank52bc0bba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/52bc0bb6317bfabb64058a71cf8c292a0a2b2f0d" target="_blank">52bc0bb</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree2ffce0e1370e46a5d0c5a699afd2016a769ec64etargetblank2ffce0ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/2ffce0e1370e46a5d0c5a699afd2016a769ec64e" target="_blank">2ffce0e</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree52bc0bb6317bfabb64058a71cf8c292a0a2b2f0dtargetblank52bc0bba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree2ffce0e1370e46a5d0c5a699afd2016a769ec64etargetblank2ffce0ea" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/52bc0bb6317bfabb64058a71cf8c292a0a2b2f0d" target="_blank">52bc0bb</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/2ffce0e1370e46a5d0c5a699afd2016a769ec64e" target="_blank">2ffce0e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/2ffce0e1370e46a5d0c5a699afd2016a769ec64e/analysis/pQTL.Rmd" target="_blank">2ffce0e</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-09
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/2932b6970a0385d07b08ac6a96a251ff33ece0ca/docs/pQTL.html" target="_blank">2932b69</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-04
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1016,12 +1050,20 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>10/11/2023</h2>
+<div id="functional-enrichment-of-nearest-genes-to-trans-pqtl-found-by-pco" class="section level3">
+<h3>Functional enrichment of nearest genes to trans-pQTL found by PCO</h3>
+<p>I found 2418 unique nearest genes of trans-pQTLs found by PCO. Based on gProfiler gene ontology enrichment analysis, there are 720 enriched GO terms (48 MF, 578 BP and 94 CC), only one of which is relevant to transcription (positive regulation of NF-kappaB transcription factor activity). Top MF functions are peptide antigen binding, MHC class II protein complex binding, MHC class II receptor activity, peptide binding and MHC protein complex binding; top BP functions are immune system process, regulation of immune system process, positive regulation of response to stimulus, positive regulation of immune system process, immune response.</p>
+<p>In contrast, for 183 unique nearest genes of trans-eQTLs found in DGN (Wang et al., 2022), there are 38 enriched GO terms, 10 of which is relevant to transcription (DNA-binding transcription factor activity, DNA-templated transcription, etc.).</p>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>9/25/2023</h2>
 <div id="trans-signal-of-protein-complex-using-pco" class="section level3">
 <h3>Trans-signal of protein complex using PCO</h3>
 <p>UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets.</p>
 <p>I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with &gt; 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2).</p>
-There are 966,157 significant module-SNP pairs (p &lt; 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
+There are 966,157 significant module-SNP pairs (p &lt; 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs for 519 modules. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
 <div class="figure" style="text-align: center">
 <img src="assets/ukb_pco_univar_comp.png" alt="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"  />
 <p class="caption">
@@ -1065,7 +1107,7 @@ liangend
 </table>
 </div>
 </div>
-Among 12155 trans-pQTLs, 1465 of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 of them are within 1 Mb.
+Among 12155 trans-pQTLs, 1465 (248 modules) of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 (66 modules) of them are within 1 Mb.
 <div class="figure" style="text-align: center">
 <img src="assets/pqtl_gene_dist.png" alt="Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)"  />
 <p class="caption">
@@ -1109,6 +1151,8 @@ liangend
 </table>
 </div>
 </div>
+<p>For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p &lt; 0.05/157), 67/157 are genome-wide significant (p &lt; 5e-8/2837).</p>
+<p>For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p &lt; 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs.</p>
 </div>
 <div id="colocalization-with-gwas-signals" class="section level3">
 <h3>Colocalization with GWAS signals</h3>
@@ -1158,7 +1202,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-1" class="section level2">
+<div id="section-2" class="section level2">
 <h2>9/13/2023</h2>
 <div id="enhancer-length-of-pqtl-genes" class="section level3">
 <h3>Enhancer length of pQTL genes</h3>
@@ -1387,7 +1431,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>9/6/2023</h2>
 <div id="enhancer-domain-score-eds-of-pqtl-genes" class="section level3">
 <h3>Enhancer domain score (EDS) of pQTL genes</h3>
@@ -1459,7 +1503,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-3" class="section level2">
+<div id="section-4" class="section level2">
 <h2>8/11/2023</h2>
 <div id="pi1-value-for-significant-pco-signals-in-each-module" class="section level3">
 <h3>pi1 value for significant PCO signals in each module</h3>
@@ -2089,7 +2133,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>7/24/2023</h2>
 <div id="protein-qtl-analysis" class="section level3">
 <h3>Protein QTL analysis</h3>
