@@ -20,21 +20,31 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 10/11/2023
+### Functional enrichment of nearest genes to trans-pQTL found by PCO
+I found 2418 unique nearest genes of trans-pQTLs found by PCO. Based on gProfiler gene ontology enrichment analysis, there are 720 enriched GO terms (48 MF, 578 BP and 94 CC), only one of which is relevant to transcription (positive regulation of NF-kappaB transcription factor activity). Top MF functions are peptide antigen binding, MHC class II protein complex binding, MHC class II receptor activity, peptide binding and MHC protein complex binding; top BP functions are immune system process, regulation of immune system process, positive regulation of response to stimulus, positive regulation of immune system process, immune response.
+
+In contrast, for 183 unique nearest genes of trans-eQTLs found in DGN (Wang et al., 2022), there are 38 enriched GO terms, 10 of which is relevant to transcription (DNA-binding transcription factor activity, DNA-templated transcription, etc.). 
+
 ## 9/25/2023
 ### Trans-signal of protein complex using PCO
 UKB protein summary stats have 2940 summary stats from 33995 individuals. 2837 of summary stats target on 2818 genes on autosomes without multiple targets. 
 
 I used a protein complex database, CORUM, to define protein modules PCO analysis of UKB data. There are in total 3637 human protein complexes in CORUM database, including 15033 proteins (4421 unique ones). 598 protein complexes overlap with > 1 protein in UKB data, including 1436 proteins (535 unique ones). The number of proteins in these complexes varies from 2 to 13 (mean: 2.4; median: 2). 
 
-There are 966,157 significant module-SNP pairs (p < 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
+There are 966,157 significant module-SNP pairs (p < 5e-8/598). By grouping them into 200 kb loci around leading SNPs, there are 12155 module-loci pairs for 519 modules. By comparing to minimum p in the loci for each protein in UKB univariate analysis, there are 1676 loci only significant in PCO, 4957 loci with smaller p values in PCO.
 ```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (14_ukb_pco_mahattan.R)"}
 knitr::include_graphics(c("assets/ukb_pco_univar_comp.png"), error = FALSE)
 ```
 
-Among 12155 trans-pQTLs, 1465 of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 of them are within 1 Mb.
+Among 12155 trans-pQTLs, 1465 (248 modules) of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 (66 modules) of them are within 1 Mb.
 ```{r echo=F, fig.align='center', fig.cap="Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)"}
 knitr::include_graphics(c("assets/pqtl_gene_dist.png"), error = FALSE)
 ```
+
+For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p < 0.05/157), 67/157 are genome-wide significant (p < 5e-8/2837). 
+
+For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p < 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs.
 
 ### Colocalization with GWAS signals
 Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-PCO signals are more likely to colocalize with GWAS signals (PP4 > 0.5).
