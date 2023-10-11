@@ -24,7 +24,13 @@ blockquote {
 ### Functional enrichment of nearest genes to trans-pQTL found by PCO
 I found 2418 unique nearest genes of trans-pQTLs found by PCO. Based on gProfiler gene ontology enrichment analysis, there are 720 enriched GO terms (48 MF, 578 BP and 94 CC), only one of which is relevant to transcription (positive regulation of NF-kappaB transcription factor activity). Top MF functions are peptide antigen binding, MHC class II protein complex binding, MHC class II receptor activity, peptide binding and MHC protein complex binding; top BP functions are immune system process, regulation of immune system process, positive regulation of response to stimulus, positive regulation of immune system process, immune response.
 
-In contrast, for 183 unique nearest genes of trans-eQTLs found in DGN (Wang et al., 2022), there are 38 enriched GO terms, 10 of which is relevant to transcription (DNA-binding transcription factor activity, DNA-templated transcription, etc.). 
+In contrast, for 183 unique nearest genes of trans-eQTLs found in DGN (Wang et al., 2022), there are 38 enriched GO terms, 10 of which is relevant to transcription (DNA-binding transcription factor activity, DNA-templated transcription, etc.).
+
+### Univariate p values of two-subunit-complexes
+There are 433 protein complexes containing only two subunits. I found the cis SNP (within 1 Mb) with most extreme p value of one subunit, and checked the corresponding p values of the other subunit. In most cases, the other p value is not significant.
+```{r echo=F, fig.align='center', fig.cap="Comparison of two-subunit-complexes p values (16_two_subunit_complex.R)"}
+knitr::include_graphics(c("assets/two_subunit_p.png"), error = FALSE)
+```
 
 ## 9/25/2023
 ### Trans-signal of protein complex using PCO
@@ -68,7 +74,7 @@ knitr::include_graphics(c("assets/pLI_enh_gene_len.png"), error = FALSE)
 ```
 
 ### Effect size of most significant cis and trans signals
-Unlike eQTL, the most extreme cis and trans effects (smallest p value) in protein are not significantly different.
+I first found the most significant cis and trans SNP for each protein in UKB dataset, and then find the corresponding Z values in Sun et al. (2018). As in gene expression, the most extreme cis effects in protein are larger than trans.
 ```{r echo=F, fig.align='center', fig.cap="Extreme cis and trans effect size for each protein (13_most_sig_cis_trans.R)"}
 knitr::include_graphics(c("assets/most_sig_beta.png"), error = FALSE)
 ```
