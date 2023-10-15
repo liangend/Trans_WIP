@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-10-11
+<strong>Last updated:</strong> 2023-10-14
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree629b9fbbfbaf34127b8ff55ddab4e4e52ce5ab74targetblank629b9fba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/629b9fbbfbaf34127b8ff55ddab4e4e52ce5ab74" target="_blank">629b9fb</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree038c8657245c63e938d07cf1f206a0c168acd42btargetblank038c865a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/038c8657245c63e938d07cf1f206a0c168acd42b" target="_blank">038c865</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree629b9fbbfbaf34127b8ff55ddab4e4e52ce5ab74targetblank629b9fba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree038c8657245c63e938d07cf1f206a0c168acd42btargetblank038c865a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/629b9fbbfbaf34127b8ff55ddab4e4e52ce5ab74" target="_blank">629b9fb</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/038c8657245c63e938d07cf1f206a0c168acd42b" target="_blank">038c865</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/038c8657245c63e938d07cf1f206a0c168acd42b/analysis/pQTL.Rmd" target="_blank">038c865</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-15
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/88c05447568373c0779f02820fccb5ff46157571/docs/pQTL.html" target="_blank">88c0544</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1084,6 +1118,19 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>10/18/2023</h2>
+<div id="trans-h2-proportion-vs-pli" class="section level3">
+<h3>trans h2 proportion vs pLI</h3>
+For UKB proteins, I calculate the total h2 and trans h2 (&gt; 5 Mb), and compared with gene pLI. Genes with higher proportion of trans h2 have higher pLI.
+<div class="figure" style="text-align: center">
+<img src="assets/pLI_trans_h2.png" alt="pLI against trans h2 proportion (17_pLI_trans_h2.R)"  />
+<p class="caption">
+pLI against trans h2 proportion (17_pLI_trans_h2.R)
+</p>
+</div>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>10/11/2023</h2>
 <div id="functional-enrichment-of-nearest-genes-to-trans-pqtl-found-by-pco" class="section level3">
 <h3>Functional enrichment of nearest genes to trans-pQTL found by PCO</h3>
@@ -1099,9 +1146,46 @@ There are 433 protein complexes containing only two subunits. I found the cis SN
 Comparison of two-subunit-complexes p values (16_two_subunit_complex.R)
 </p>
 </div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-two_subunit_p">
+Past versions of two_subunit_p.png
+</button>
+</p>
+<div id="fig-two_subunit_p" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/d4d6cd2021aa75fd422c888f5041cfd015d8fa57/docs/assets/two_subunit_p.png" target="_blank">d4d6cd2</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-11
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div id="section-1" class="section level2">
+</div>
+</div>
+<div id="section-2" class="section level2">
 <h2>9/25/2023</h2>
 <div id="trans-signal-of-protein-complex-using-pco" class="section level3">
 <h3>Trans-signal of protein complex using PCO</h3>
@@ -1151,7 +1235,7 @@ liangend
 </table>
 </div>
 </div>
-Among 12155 trans-pQTLs, 1465 (248 modules) of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 (66 modules) of them are within 1 Mb.
+Among 12155 trans-pQTLs, 1465 (248 modules) of them are located on the same chromosome of one of proteins in the targeting protein complex. Average distance of leading SNP to the nearest gene is 35,964,293, median distance is 20,441,333. 265 (66 modules) of them are within 1 Mb. I permuted the pQTL and targeting protein complexes for 100 time to check how often the trans-pQTL is located within 1 Mb of at least one subunit of the complex as the random background. For random background, there are on average 79.7 loci (67 to 96) within 1 Mb. 265 is 3.32 times more enriched than random background (p &lt; 0.01; 18_pQTL_random_background.R).
 <div class="figure" style="text-align: center">
 <img src="assets/pqtl_gene_dist.png" alt="Comparison of univariate and PCO results for UKB data (15_ukb_pco_summ.R)"  />
 <p class="caption">
@@ -1206,7 +1290,7 @@ liangend
 </table>
 </div>
 </div>
-<p>For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p &lt; 0.05/157), 67/157 are genome-wide significant (p &lt; 5e-8/2837).</p>
+<p>For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p &lt; 0.05/157). I randomly sample a nearby gene (within 1 Mb, average number of cis genes = 12.2, median = 12, max = 28, min = 0) for each of 157 loci and check if the locus is significant cis-pQTL for the gene. In 100 random samples, average loci with p &lt; 0.05/157 is 52.7 (max = 64, min = 37), so 76 is 1.44 times more enriched than random background (p &lt; 0.01). 67/157 are genome-wide significant (p &lt; 5e-8/2837).</p>
 <p>For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p &lt; 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs.</p>
 </div>
 <div id="colocalization-with-gwas-signals" class="section level3">
@@ -1257,7 +1341,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>9/13/2023</h2>
 <div id="enhancer-length-of-pqtl-genes" class="section level3">
 <h3>Enhancer length of pQTL genes</h3>
@@ -1429,7 +1513,7 @@ liangend
 </div>
 <div id="effect-size-of-most-significant-cis-and-trans-signals" class="section level3">
 <h3>Effect size of most significant cis and trans signals</h3>
-I first found the most significant cis and trans SNP for each protein in UKB dataset, and then find the corresponding Z values in Sun et al. (2018). As in gene expression, the most extreme cis effects in protein are larger than trans.
+I first found the most significant cis and trans SNP for each protein in UKB dataset (Sun et al., 2018), and then find the corresponding Z values in Sun et al., 2018 (UKB). As in gene expression, the most extreme cis effects in protein are larger than trans.
 <div class="figure" style="text-align: center">
 <img src="assets/most_sig_beta.png" alt="Extreme cis and trans effect size for each protein (13_most_sig_cis_trans.R)"  />
 <p class="caption">
@@ -1460,6 +1544,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/liangend/Trans_WIP/blob/d4d6cd2021aa75fd422c888f5041cfd015d8fa57/docs/assets/most_sig_beta.png" target="_blank">d4d6cd2</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-11
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/liangend/Trans_WIP/blob/82e09051cfc063620d106fb0d76065d70729e883/docs/assets/most_sig_beta.png" target="_blank">82e0905</a>
 </td>
 <td>
@@ -1486,7 +1581,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-3" class="section level2">
+<div id="section-4" class="section level2">
 <h2>9/6/2023</h2>
 <div id="enhancer-domain-score-eds-of-pqtl-genes" class="section level3">
 <h3>Enhancer domain score (EDS) of pQTL genes</h3>
@@ -1558,7 +1653,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>8/11/2023</h2>
 <div id="pi1-value-for-significant-pco-signals-in-each-module" class="section level3">
 <h3>pi1 value for significant PCO signals in each module</h3>
@@ -2188,7 +2283,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-5" class="section level2">
+<div id="section-6" class="section level2">
 <h2>7/24/2023</h2>
 <div id="protein-qtl-analysis" class="section level3">
 <h3>Protein QTL analysis</h3>
