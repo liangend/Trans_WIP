@@ -58,6 +58,16 @@ knitr::include_graphics(c("assets/pqtl_gene_dist.png"), error = FALSE)
 For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p < 0.05/157). I randomly sample a nearby gene (within 1 Mb, average number of cis genes = 12.2, median = 12, max = 28, min = 0) for each of 157 loci and check if the locus is significant cis-pQTL for the gene. In 100 random samples, average loci with p < 0.05/157 is 52.7 (max = 64, min = 37), so 76 is 1.44 times more enriched than random background (p < 0.01). 67/157 are genome-wide significant (p < 5e-8/2837). 
 
 For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p < 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs.
+As show in the following figure, red bars are cis effect, and blue bars are trans. Significant effects are bordered in black (p < 0.05/245). Significant trans effects seem to always have the same direction. For loci 5000, there are two genes (F10 and F7) located in cis regions of trans-pQTL.
+```{r echo=F, fig.align='center'}
+knitr::include_graphics(c("assets/pqtl_cis_trans_dir1.png"), error = FALSE)
+```
+```{r echo=F, fig.align='center'}
+knitr::include_graphics(c("assets/pqtl_cis_trans_dir2.png"), error = FALSE)
+```
+```{r echo=F, fig.align='center', fig.cap="Trans pQTL effect directions (19_cis_trans_direction.R)"}
+knitr::include_graphics(c("assets/pqtl_cis_trans_dir3.png"), error = FALSE)
+```
 
 ### Colocalization with GWAS signals
 Across 35 continuous phenotypes (blood traits, height, weight, LDL, etc.), trans-PCO signals are more likely to colocalize with GWAS signals (PP4 > 0.5).
