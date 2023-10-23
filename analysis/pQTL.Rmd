@@ -20,6 +20,13 @@ blockquote {
     border-left: 5px solid #eee;
 }
 ```
+## 10/25/2023
+### pQTL vs eQTL
+I first found the most extreme (smallest p) cis and trans SNPs for each protein in UKB, and then found the corresponding beta's in Sun et al. (2018) and DGN. There are 1162 overlapping proteins between UKB and Sun, and 1851 overlapping proteins between UKB and DGN. For cis effects of Sun and DGN, there are 417 overlapping protein-SNP pairs; for trans effects, there are 458 overlapping protein-SNP pairs. 216/417 cis effects have the same effect direction; 239/458 of trans effects have the same effect direction. Absolute values of cis beta are not significantly different, but those of trans beta is larger for Sun et al. (2018).
+```{r echo=F, fig.align='center', fig.cap="Beta of pQTL and eQTL (20_pqtl_vs_eqtl.R)"}
+knitr::include_graphics(c("assets/beta_pqtl_eqtl.png"), error = FALSE)
+```
+
 ## 10/18/2023
 ### trans h2 proportion vs pLI
 For UKB proteins, I calculate the total h2 and trans h2 (> 5 Mb), and compared with gene pLI. Genes with higher proportion of trans h2 have higher pLI.
@@ -126,7 +133,7 @@ knitr::include_graphics(c("assets/aptamer_bind_spe.png"), error = FALSE)
 ### Loss-of-function intolerance of pQTL genes
 There are 3023, 4427, 1403 protein coding genes included in this analysis for Sun et al. (2018), Gudjonsson et al. (2022), and UKB (2022) respectively.
 
-Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
+Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in all datasets.
 ```{r echo=F, fig.align='center', fig.cap="pLI of different signal types (08_pqtl_pLI.R)"}
 knitr::include_graphics(c("assets/pqtl_pLI.png"), error = FALSE)
 ```
