@@ -397,7 +397,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2023-10-18
+<strong>Last updated:</strong> 2023-10-23
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -488,16 +488,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree35e8777ec1df069df213307e94aba8d90bdb45betargetblank35e8777a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/35e8777ec1df069df213307e94aba8d90bdb45be" target="_blank">35e8777</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree9338727ad99e8a49e48ca11f6c865312ddc3b72dtargetblank9338727a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/liangend/Trans_WIP/tree/9338727ad99e8a49e48ca11f6c865312ddc3b72d" target="_blank">9338727</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree35e8777ec1df069df213307e94aba8d90bdb45betargetblank35e8777a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomliangendTransWIPtree9338727ad99e8a49e48ca11f6c865312ddc3b72dtargetblank9338727a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/35e8777ec1df069df213307e94aba8d90bdb45be" target="_blank">35e8777</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/liangend/Trans_WIP/tree/9338727ad99e8a49e48ca11f6c865312ddc3b72d" target="_blank">9338727</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -541,6 +541,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/9338727ad99e8a49e48ca11f6c865312ddc3b72d/analysis/pQTL.Rmd" target="_blank">9338727</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-23
+</td>
+<td>
+update
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/liangend/Trans_WIP/14eb3d9ae06b41a2734b18083e0e626819de9631/docs/pQTL.html" target="_blank">14eb3d9</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1152,6 +1186,19 @@ blockquote {
 }
 </style>
 <div id="section" class="section level2">
+<h2>10/25/2023</h2>
+<div id="pqtl-vs-eqtl" class="section level3">
+<h3>pQTL vs eQTL</h3>
+I first found the most extreme (smallest p) cis and trans SNPs for each protein in UKB, and then found the corresponding beta’s in Sun et al. (2018) and DGN. There are 1162 overlapping proteins between UKB and Sun, and 1851 overlapping proteins between UKB and DGN. For cis effects of Sun and DGN, there are 417 overlapping protein-SNP pairs; for trans effects, there are 458 overlapping protein-SNP pairs. 216/417 cis effects have the same effect direction; 239/458 of trans effects have the same effect direction. Absolute values of cis beta are not significantly different, but those of trans beta is larger for Sun et al. (2018).
+<div class="figure" style="text-align: center">
+<img src="assets/beta_pqtl_eqtl.png" alt="Beta of pQTL and eQTL (20_pqtl_vs_eqtl.R)"  />
+<p class="caption">
+Beta of pQTL and eQTL (20_pqtl_vs_eqtl.R)
+</p>
+</div>
+</div>
+</div>
+<div id="section-1" class="section level2">
 <h2>10/18/2023</h2>
 <div id="trans-h2-proportion-vs-pli" class="section level3">
 <h3>trans h2 proportion vs pLI</h3>
@@ -1201,7 +1248,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-1" class="section level2">
+<div id="section-2" class="section level2">
 <h2>10/11/2023</h2>
 <div id="functional-enrichment-of-nearest-genes-to-trans-pqtl-found-by-pco" class="section level3">
 <h3>Functional enrichment of nearest genes to trans-pQTL found by PCO</h3>
@@ -1256,7 +1303,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-2" class="section level2">
+<div id="section-3" class="section level2">
 <h2>9/25/2023</h2>
 <div id="trans-signal-of-protein-complex-using-pco" class="section level3">
 <h3>Trans-signal of protein complex using PCO</h3>
@@ -1362,12 +1409,124 @@ liangend
 </div>
 </div>
 <p>For the 265 loci with nearby gene (within 1 Mb) as a subunit of the targeting protein complex, 157 (31 modules) of them have the corresponding summary stats (23 proteins). 76/157 (23 modules, 17 proteins) of the leading SNP in trans-pQTL are a significant cis-pQTL of the nearby gene (p &lt; 0.05/157). I randomly sample a nearby gene (within 1 Mb, average number of cis genes = 12.2, median = 12, max = 28, min = 0) for each of 157 loci and check if the locus is significant cis-pQTL for the gene. In 100 random samples, average loci with p &lt; 0.05/157 is 52.7 (max = 64, min = 37), so 76 is 1.44 times more enriched than random background (p &lt; 0.01). 67/157 are genome-wide significant (p &lt; 5e-8/2837).</p>
-For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p &lt; 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs. As show in the following figure, red bars are cis effect, and blue bars are trans. Significant effects are bordered in black (p &lt; 0.05/245). Significant trans effects seem to always have the same direction. For loci 5000, there are two genes (F10 and F7) located in cis regions of trans-pQTL. <img src="assets/pqtl_cis_trans_dir1.png" style="display: block; margin: auto;" /> <img src="assets/pqtl_cis_trans_dir2.png" style="display: block; margin: auto;" />
+<p>For 76 trans-pQTLs that are cis-pQTL of the nearby gene, 38 of them have consistent effect direction, meaning the SNP effects on all proteins in the target protein complex have the same effect direction. I only looked at significant effects (p &lt; 0.05/245), where 245 is the total number of proteins of the target protein complexes of the 76 trans-pQTLs. As show in the following figure, red bars are cis effect, and blue bars are trans. Significant effects are bordered in black (p &lt; 0.05/245). Significant trans effects seem to always have the same direction. For loci 5000, there are two genes (F10 and F7) located in cis regions of trans-pQTL. <img src="assets/pqtl_cis_trans_dir1.png" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_cis_trans_dir1">
+Past versions of pqtl_cis_trans_dir1.png
+</button>
+</p>
+<div id="fig-pqtl_cis_trans_dir1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/36e976cf95fb582d084d27773a867be871a161ff/docs/assets/pqtl_cis_trans_dir1.png" target="_blank">36e976c</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-18
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><img src="assets/pqtl_cis_trans_dir2.png" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_cis_trans_dir2">
+Past versions of pqtl_cis_trans_dir2.png
+</button>
+</p>
+<div id="fig-pqtl_cis_trans_dir2" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/36e976cf95fb582d084d27773a867be871a161ff/docs/assets/pqtl_cis_trans_dir2.png" target="_blank">36e976c</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-18
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="figure" style="text-align: center">
 <img src="assets/pqtl_cis_trans_dir3.png" alt="Trans pQTL effect directions (19_cis_trans_direction.R)"  />
 <p class="caption">
 Trans pQTL effect directions (19_cis_trans_direction.R)
 </p>
+</div>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-pqtl_cis_trans_dir3">
+Past versions of pqtl_cis_trans_dir3.png
+</button>
+</p>
+<div id="fig-pqtl_cis_trans_dir3" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/liangend/Trans_WIP/blob/36e976cf95fb582d084d27773a867be871a161ff/docs/assets/pqtl_cis_trans_dir3.png" target="_blank">36e976c</a>
+</td>
+<td>
+liangend
+</td>
+<td>
+2023-10-18
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 <div id="colocalization-with-gwas-signals" class="section level3">
@@ -1418,7 +1577,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-3" class="section level2">
+<div id="section-4" class="section level2">
 <h2>9/13/2023</h2>
 <div id="enhancer-length-of-pqtl-genes" class="section level3">
 <h3>Enhancer length of pQTL genes</h3>
@@ -1669,7 +1828,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-4" class="section level2">
+<div id="section-5" class="section level2">
 <h2>9/6/2023</h2>
 <div id="enhancer-domain-score-eds-of-pqtl-genes" class="section level3">
 <h3>Enhancer domain score (EDS) of pQTL genes</h3>
@@ -1741,7 +1900,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-5" class="section level2">
+<div id="section-6" class="section level2">
 <h2>8/11/2023</h2>
 <div id="pi1-value-for-significant-pco-signals-in-each-module" class="section level3">
 <h3>pi1 value for significant PCO signals in each module</h3>
@@ -1955,7 +2114,7 @@ liangend
 <div id="loss-of-function-intolerance-of-pqtl-genes" class="section level3">
 <h3>Loss-of-function intolerance of pQTL genes</h3>
 <p>There are 3023, 4427, 1403 protein coding genes included in this analysis for Sun et al. (2018), Gudjonsson et al. (2022), and UKB (2022) respectively.</p>
-Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in both datasets.
+Genes without cis-signals are more likely to be intolerant of loss-of-function variations. Similar results were observed in all datasets.
 <div class="figure" style="text-align: center">
 <img src="assets/pqtl_pLI.png" alt="pLI of different signal types (08_pqtl_pLI.R)"  />
 <p class="caption">
@@ -2371,7 +2530,7 @@ liangend
 </div>
 </div>
 </div>
-<div id="section-6" class="section level2">
+<div id="section-7" class="section level2">
 <h2>7/24/2023</h2>
 <div id="protein-qtl-analysis" class="section level3">
 <h3>Protein QTL analysis</h3>
